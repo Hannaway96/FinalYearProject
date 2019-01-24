@@ -13,9 +13,10 @@
     <string name="create_profile_dob">Date of Birth(dd/mm/yyyy)</string>
     <string name="create_profile_return_txt">Return to Log in</string>
 
-    <string name="menu_Title">Pick a feature to use</string>
+    <string name="menu_Title">Pick a feature</string>
     <string name="menu_workout_Log">Workout Log</string>
     <string name="menu_workouts">Workouts</string>
+    <string name="menu_exit">Exit</string>
 
 
 </resources>

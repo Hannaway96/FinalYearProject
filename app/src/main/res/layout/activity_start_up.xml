@@ -6,98 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".StartUp">
 
-    <TextView
-        android:id="@+id/Start_Up_Welcome_txtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/start_up_welcome"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/Start_Up_Desc_TxtView"
-        android:layout_width="298dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/start_up_welcome_Desc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Start_Up_Welcome_txtView" />
+        <TextView
+            android:id="@+id/Start_Up_Welcome_txtView"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/start_up_welcome"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="16dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="384dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="131dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/InstructionTxtView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/welcome_image" />
+        <TextView
+            android:id="@+id/Start_Up_Desc_TxtView"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="40dp"
+            android:text="@string/start_up_welcome_Desc"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="69dp" />
 
-    <TextView
-        android:id="@+id/InstructionTxtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="314dp"
-        android:text="@string/start_up_instruction"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        <ImageView
+            android:id="@+id/StartUp_imgView"
+            android:layout_width="match_parent"
+            android:layout_height="251dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/welcome_image"
+            tools:layout_editor_absoluteX="14dp"
+            tools:layout_editor_absoluteY="136dp" />
 
-    <Spinner
-        android:id="@+id/Start_Up_UserSpinner"
-        android:layout_width="271dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InstructionTxtView" />
+        <TextView
+            android:id="@+id/InstructionTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="40dp"
+            android:text="@string/start_up_instruction"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="398dp" />
 
-    <Button
-        android:id="@+id/Start_Up_Create_Profile_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="8dp"
-        android:text="Continue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Start_Up_UserSpinner" />
+        <Spinner
+            android:id="@+id/Start_Up_UserSpinner"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:spinnerMode="dropdown"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="426dp" />
 
-    <TextView
-        android:id="@+id/create_profile_txtView"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/start_up_create_profile"
-        android:clickable="true"
-        android:onClick="CreateProfile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Start_Up_Create_Profile_btn" />
+        <Button
+            android:id="@+id/Start_Up_Create_Profile_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Continue"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="474dp" />
+
+        <TextView
+            android:id="@+id/create_profile_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="CreateProfile"
+            android:paddingTop="40dp"
+            android:text="@string/start_up_create_profile"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="638dp" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
