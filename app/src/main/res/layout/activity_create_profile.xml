@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateProfile">
+
+    <EditText
+        android:id="@+id/Create_Profile_name_editTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="@string/create_profile_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/Create_Profile_height_editTxt"
+        app:layout_constraintStart_toStartOf="@+id/Create_Profile_height_editTxt"
+        app:layout_constraintTop_toBottomOf="@+id/Create_Profile_warningTxt" />
+
+    <EditText
+        android:id="@+id/Create_Profile_height_editTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="@string/create_profile_height"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/Create_Profile_weight_editTxt"
+        app:layout_constraintStart_toStartOf="@+id/Create_Profile_weight_editTxt"
+        app:layout_constraintTop_toBottomOf="@+id/Create_Profile_name_editTxt" />
+
+    <EditText
+        android:id="@+id/Create_Profile_weight_editTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/create_profile_weight"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/Create_Profile_dob_editTxt"
+        app:layout_constraintStart_toStartOf="@+id/Create_Profile_dob_editTxt"
+        app:layout_constraintTop_toBottomOf="@+id/Create_Profile_height_editTxt" />
+
+    <EditText
+        android:id="@+id/Create_Profile_dob_editTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="39dp"
+        android:ems="10"
+        android:hint="@string/create_profile_dob"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/Create_Profile_warningTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Create_Profile_weight_editTxt" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="239dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Create_Profile_dob_editTxt"
+        app:layout_constraintTop_toBottomOf="@+id/Create_Profile_dob_editTxt">
+
+        <RadioButton
+            android:id="@+id/radBtn_Reg_Male"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="68dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radBtn_Reg_Female"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginRight="160dp"
+            android:layout_marginBottom="68dp"
+            android:text="Female" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/Create_Profile_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="Register_Accepted"
+        android:text="Create"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/Create_Profile_return_txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="SignIn"
+        android:text="@string/create_profile_return_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Create_Profile_btn" />
+
+    <TextView
+        android:id="@+id/Create_Profile_warningTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="42dp"
+        android:text="@string/create_profile_warningTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

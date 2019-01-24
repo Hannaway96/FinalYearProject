@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "547649743438",
+    "firebase_url": "https://finalyearproject-43ada.firebaseio.com",
+    "project_id": "finalyearproject-43ada",
+    "storage_bucket": "finalyearproject-43ada.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547649743438:android:a9cfdfc49a44bf45",
+        "android_client_info": {
+          "package_name": "com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547649743438-spov3k8q1c1ro8ak0l0hit9r6bk4baeq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker",
+            "certificate_hash": "e8c177de3bac4794531c39c18566b944ed74f7c0"
+          }
+        },
+        {
+          "client_id": "547649743438-l9sgi6p3hm8ec826kol3ha4308j475g4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSyQMOrFaCX2CNOCyD8m9nrZcMj7bnypY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547649743438-l9sgi6p3hm8ec826kol3ha4308j475g4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

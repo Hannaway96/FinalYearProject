@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">EEE521-FinalYearProject-B00708431-FitnessTracker</string>
+
+    <string name="start_up_welcome">Welcome!</string>
+    <string name="start_up_welcome_Desc">Thank you for using this app, you will use it to keep track of your exercise routine and help motivate you to push your potential!</string>
+    <string name="start_up_instruction">Choose a profile from the drop down list</string>
+    <string name="start_up_create_profile">if you don\'t have a profile you can click here</string>
+
+    <string name="create_profile_warningTxt">NOTE: This app will require your personal measurements to determine calories burned</string>
+    <string name="create_profile_name">Name</string>
+    <string name="create_profile_height">Height(cm)</string>
+    <string name="create_profile_weight">Weight(kg)</string>
+    <string name="create_profile_dob">Date of Birth(dd/mm/yyyy)</string>
+    <string name="create_profile_return_txt">Return to Log in</string>
+
+    <string name="menu_Title">Pick a feature to use</string>
+    <string name="menu_workout_Log">Workout Log</string>
+    <string name="menu_workouts">Workouts</string>
+
+
 </resources>
