@@ -18,5 +18,15 @@
     <string name="menu_workouts">Workouts</string>
     <string name="menu_exit">Exit</string>
 
+    <string name="WorkoutLog_add_Exercise_btn">Add Exercise</string>
+    <string name="WorkoutLog_Log_TextView">Workout Log</string>
+    <string name="WorkoutLog_Save_Workout_Btn">Save Workout</string>
+
+    <string name="AddExercise_Title">Add Exercise</string>
+    <string name="AddExercise_type_txt">Type</string>
+    <string name="AddExercise_exerciseName_txt">Exercise</string>
+    <string name="AddExercise_SetsTxt"># of Sets</string>
+    <string name="AddEXercise_RepsTxr"># of Reps</string>
+    <string name="AddExercise_Add_Btn">Add</string>
 
 </resources>

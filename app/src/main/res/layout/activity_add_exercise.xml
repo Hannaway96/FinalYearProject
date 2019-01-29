@@ -6,4 +6,138 @@
     android:layout_height="match_parent"
     tools:context=".AddExercise">
 
+    <TextView
+        android:id="@+id/addExercise_AddExerciseTitleTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/AddExercise_Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/addExercise_Type_txtView"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_Type_txtView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addExercise_Type_txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/AddExercise_type_txt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_AddExerciseTitleTxtView" />
+
+    <Spinner
+        android:id="@+id/addExercise_Type_Spinner"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:dropDownWidth="match_parent"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_Type_txtView"
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_Type_txtView" />
+
+    <TextView
+        android:id="@+id/addExercise_ExerciseTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/AddExercise_exerciseName_txt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_Type_Spinner" />
+
+    <Spinner
+        android:id="@+id/addExercise_Exercise_Spinner"
+        android:layout_width="225dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_ExerciseTxt"
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_ExerciseTxt" />
+
+    <TextView
+        android:id="@+id/addExercise_RepTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="1dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/AddEXercise_RepsTxr"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/addExercise_SetsTxt"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_ExerciseTxt"
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_Exercise_Spinner" />
+
+    <EditText
+        android:id="@+id/addExercise_Rep_PlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="120dp"
+        android:ems="10"
+        android:hint="8,10,12, etc..."
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_RepTxt"
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_RepTxt" />
+
+    <TextView
+        android:id="@+id/addExercise_SetsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="57dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/AddExercise_SetsTxt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_Rep_PlainText" />
+
+    <EditText
+        android:id="@+id/addExercise_Sets_PlainTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="1,2,3 etc..."
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_SetsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_SetsTxt" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="112dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/AddExercise_Add_Btn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
