@@ -37,7 +37,7 @@
         android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="@string/create_profile_weight"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/Create_Profile_dob_editTxt"
         app:layout_constraintStart_toStartOf="@+id/Create_Profile_dob_editTxt"
         app:layout_constraintTop_toBottomOf="@+id/Create_Profile_height_editTxt" />

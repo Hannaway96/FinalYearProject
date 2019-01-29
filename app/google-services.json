@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "547649743438-o550djqsgk4lhpm2uepiehins5bofbrd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker",
+            "certificate_hash": "9df60d5f74f5b8b826e93ef036fa45b12b923f58"
+          }
+        },
+        {
           "client_id": "547649743438-l9sgi6p3hm8ec826kol3ha4308j475g4.apps.googleusercontent.com",
           "client_type": 3
         }

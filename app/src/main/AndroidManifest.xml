@@ -14,9 +14,9 @@
         <activity android:name=".WorkoutGenerator"></activity>
         <activity android:name=".AddExercise" />
         <activity android:name=".WorkoutLog" />
-        <activity android:name=".StartUp" />
         <activity android:name=".CreateProfile" />
-        <activity android:name=".Menu">
+        <activity android:name=".Menu" />
+        <activity android:name=".StartUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
