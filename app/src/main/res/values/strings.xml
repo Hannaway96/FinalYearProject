@@ -7,6 +7,8 @@
     <string name="start_up_create_profile">if you don\'t have a profile you can click here</string>
 
     <string name="create_profile_warningTxt">NOTE: This app will require your personal measurements to determine calories burned</string>
+    <string name="create_profile_email">E-mail</string>
+    <string name="create_profile_password">Password</string>
     <string name="create_profile_name">Name</string>
     <string name="create_profile_height">Height(cm)</string>
     <string name="create_profile_weight">Weight(kg)</string>
@@ -26,7 +28,7 @@
     <string name="AddExercise_type_txt">Type</string>
     <string name="AddExercise_exerciseName_txt">Exercise</string>
     <string name="AddExercise_SetsTxt"># of Sets</string>
-    <string name="AddEXercise_RepsTxr"># of Reps</string>
+    <string name="AddExercise_RepsTxr"># of Reps</string>
     <string name="AddExercise_Add_Btn">Add</string>
 
 </resources>

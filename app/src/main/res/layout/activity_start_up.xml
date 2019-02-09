@@ -7,18 +7,27 @@
     tools:context=".StartUp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="28dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/editText_Username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/Start_Up_Welcome_txtView"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
             android:paddingLeft="20dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
             android:text="@string/start_up_welcome"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="28dp"
             tools:layout_editor_absoluteY="16dp" />
@@ -28,8 +37,11 @@
             android:layout_width="298dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="sans-serif-condensed-light"
             android:paddingBottom="40dp"
             android:text="@string/start_up_welcome_Desc"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp"
             tools:layout_editor_absoluteX="43dp"
             tools:layout_editor_absoluteY="69dp" />
 
@@ -42,46 +54,84 @@
             tools:layout_editor_absoluteX="14dp"
             tools:layout_editor_absoluteY="136dp" />
 
-        <TextView
-            android:id="@+id/InstructionTxtView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingBottom="40dp"
-            android:text="@string/start_up_instruction"
-            tools:layout_editor_absoluteX="77dp"
-            tools:layout_editor_absoluteY="398dp" />
-
-        <Spinner
-            android:id="@+id/Start_Up_UserSpinner"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:spinnerMode="dropdown"
-            tools:layout_editor_absoluteX="70dp"
-            tools:layout_editor_absoluteY="426dp" />
-
-        <Button
-            android:id="@+id/Start_Up_Create_Profile_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="CreateProfile"
-            android:text="Select Profile"
-            tools:layout_editor_absoluteX="159dp"
-            tools:layout_editor_absoluteY="474dp" />
-
-        <TextView
-            android:id="@+id/create_profile_txtView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:clickable="true"
-            android:onClick="CreateProfile"
-            android:paddingTop="40dp"
-            android:text="@string/start_up_create_profile"
-            tools:layout_editor_absoluteX="67dp"
-            tools:layout_editor_absoluteY="638dp" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText_Username"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="236dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="Username"
+        android:inputType="textEmailAddress"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/editText_Password"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Username" />
+
+    <Button
+        android:id="@+id/Start_Up_Create_Profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:onClick="CreateProfile"
+        android:text="Select Profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Password" />
+
+    <TextView
+        android:id="@+id/create_profile_txtView"
+        android:layout_width="279dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:onClick="CreateProfile"
+        android:text="@string/start_up_create_profile"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Start_Up_Create_Profile_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

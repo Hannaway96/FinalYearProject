@@ -14,12 +14,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -35,10 +37,11 @@ public class StartUp extends AppCompatActivity {
 
     final private int REQUEST_INTERNET = 123;
     private Button createProfileBtn;
-    private Spinner profileNameSpinner;
+    private EditText usernameEditTxt, passwordEditTxt;
     private List<String> userList = new ArrayList<String>();
     private String TAG = "MyApp";
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private FirebaseFirestore db;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,22 +49,24 @@ public class StartUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_up);
 
-        //Changing title of activity
-        getSupportActionBar().setTitle("Workout Tracker");
-
-
         //Checks if the user wishes to close the application
         if(getIntent().getBooleanExtra("EXIT", false)){
             finish();
         }
 
+        //Create an instance of Authorisation link to Firebase
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        //create instance of database on firebase
+        db = FirebaseFirestore.getInstance();
+
+        createProfileBtn = (Button)findViewById(R.id.Start_Up_Create_Profile_btn);
+        usernameEditTxt = (EditText)findViewById(R.id.editText_Username);
+        passwordEditTxt = (EditText)findViewById(R.id.editText_Password);
+
         //CheckNetwork checks if the user is connected to the internet
         CheckNetwork();
 
-        createProfileBtn = (Button)findViewById(R.id.Start_Up_Create_Profile_btn);
-        profileNameSpinner = (Spinner)findViewById(R.id.Start_Up_UserSpinner);
-
-        PopulateSpinner();
     }
 
    public void CheckNetwork(){
@@ -101,6 +106,7 @@ public class StartUp extends AppCompatActivity {
         int returnVal = 0;
         boolean reachable = false;
 
+        //Try to ping google to see if the user has an internet connection
         try {
             Process p1 = java.lang.Runtime.getRuntime().exec("ping -c 1 www.google.com");
             returnVal = p1.waitFor();
@@ -113,48 +119,6 @@ public class StartUp extends AppCompatActivity {
         return false;
     }
 
-
-    public void PopulateSpinner(){
-
-        //TODO Fix PopulateSpinner, currently skips over Query Snapshot as it's not getting the document for some reason.
-
-        int count = 0;
-        String countAsString = Integer.toString(count);
-        final ArrayList<String> users = new ArrayList<>();
-
-        db.collection("Users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-
-                if(task.isSuccessful()){
-                    for (DocumentSnapshot document: task.getResult()){
-
-                        User user = document.toObject(User.class);
-                        users.add(user.getUserName());
-                    }
-                }
-            }
-        });
-
-    //   do{
-          //  DocumentReference docRef = db.collection("Users").document(countAsString);
-           // docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-              //  @Override
-              //  public void onSuccess(DocumentSnapshot documentSnapshot) {
-
-                //    if(documentSnapshot.exists()){
-             //
-                //    }
-           //     }
-          //  });
-
-
-        //}while(count);
-
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, userList);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        profileNameSpinner.setAdapter(dataAdapter);
-    }
 
 
 

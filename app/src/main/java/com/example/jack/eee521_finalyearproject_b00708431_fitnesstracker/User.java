@@ -4,24 +4,34 @@ import java.util.Date;
 
 public class User {
 
-    String userName;
-    double userHeight;
-    double userWeight;
-    Date userDOB;
-    String userGender;
-    int userExercises_Completed;
-    int userWorkouts_Completed;
+    private String userEmail;
+    private String userName;
+    private double userHeight;
+    private double userWeight;
+    private Date userDOB;
+    private String userGender;
+    private int userExercises_Completed;
+    private int userWorkouts_Completed;
 
     public User(){
 
     }
 
-    public User(String userName, double userHeight, double userWeight, Date userDOB, String userGender) {
+    public User(String userEmail, String userName, double userHeight, double userWeight, Date userDOB, String userGender) {
+        this.userEmail = userEmail;
         this.userName = userName;
         this.userHeight = userHeight;
         this.userWeight = userWeight;
         this.userDOB = userDOB;
         this.userGender = userGender;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
     public String getUserName() {

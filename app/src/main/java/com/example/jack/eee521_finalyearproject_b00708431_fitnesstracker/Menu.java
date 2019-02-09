@@ -16,9 +16,6 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        //changes the title of the ActionBar
-        getSupportActionBar().setTitle("Fitness Tracker Menu");
-
         //Checks if the user has requested that the program should exit
         if(getIntent().getBooleanExtra("EXIT", false)){
             finish();
