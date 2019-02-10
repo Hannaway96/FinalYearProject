@@ -13,15 +13,15 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
+//import com.google.android.gms.tasks.OnCompleteListener;
+//import com.google.android.gms.tasks.OnFailureListener;
+//import com.google.android.gms.tasks.OnSuccessListener;
+//import com.google.android.gms.tasks.Task;
+//import com.google.firebase.auth.AuthResult;
+//import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.auth.FirebaseAuthException;
+//import com.google.firebase.firestore.DocumentReference;
+//import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.w3c.dom.Text;
 
@@ -36,23 +36,26 @@ public class CreateProfile extends AppCompatActivity {
     private Button createBtn;
     private EditText emailEditTxt, passwordEditTxt, usernameEditTxt, userHeightEditTxt, userWeightEditTxt, userDOBEditTxt;
     private String TAG = "";
-    RadioButton maleRadBtn, femaleRadBtn ;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private FirebaseAuth firebaseAuth;
+    private RadioButton maleRadBtn, femaleRadBtn ;
+    //private FirebaseFirestore db ;
+    //private FirebaseAuth firebaseAuth;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile);
 
         //Getting an instance of firebase authorisation for adding a user to the database
-        firebaseAuth = FirebaseAuth.getInstance();
+       // firebaseAuth = FirebaseAuth.getInstance();
+        //db = FirebaseFirestore.getInstance();
 
         emailEditTxt = (EditText)findViewById(R.id.Create_Profile_email_editTxt);
         passwordEditTxt = (EditText)findViewById(R.id.Create_Profile_password_EditTxt);
         usernameEditTxt = (EditText)findViewById(R.id.Create_Profile_name_editTxt);
         userWeightEditTxt = (EditText)findViewById(R.id.Create_Profile_weight_editTxt);
         userHeightEditTxt = (EditText)findViewById(R.id.Create_Profile_height_editTxt);
-        userDOBEditTxt = (EditText)findViewById(R.id.Create_Profile_dob_editTxt);
+        userDOBEditTxt = (EditText)findViewById(R.id.Create_Profile_dobTxt);
         maleRadBtn = findViewById(R.id.radBtn_Reg_Male);
         femaleRadBtn = findViewById(R.id.radBtn_Reg_Female);
         createBtn = (Button)findViewById(R.id.Start_Up_Create_Profile_btn);
@@ -67,10 +70,8 @@ public class CreateProfile extends AppCompatActivity {
         String userName = usernameEditTxt.getText().toString();
         double userHeight = Double.parseDouble(userHeightEditTxt.getText().toString());
         double userWeight = Double.parseDouble(userWeightEditTxt.getText().toString());
-        Date userDob = new SimpleDateFormat("dd/mm/yyyy").parse(((EditText)findViewById(R.id.Create_Profile_dob_editTxt)).getText().toString());
+        String userDob = userDOBEditTxt.getText().toString();
         String gender = "";
-
-        //Validation(userEmail, userPassword, userName, userHeight, userWeight, userDob, gender);
 
         if(maleRadBtn.isChecked() == true && femaleRadBtn.isChecked() == false){
             gender = "Male";
@@ -88,40 +89,39 @@ public class CreateProfile extends AppCompatActivity {
             userMap.put("Height(cm)", userHeight);
             userMap.put("Weight(kg)", userWeight);
 
-            firebaseAuth.createUserWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(CreateProfile.this, new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        Toast.makeText(CreateProfile.this, "Profile created successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(CreateProfile.this, StartUp.class));
-
-
-                    }
-                    else{
-                        FirebaseAuthException e = (FirebaseAuthException) task.getException();
-                        Toast.makeText(CreateProfile.this, "Failed to create profile. " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
+         //   firebaseAuth.createUserWithEmailAndPassword(userEmail, userPassword)
+         //           .addOnCompleteListener(CreateProfile.this, new OnCompleteListener<AuthResult>() {
+         //       @Override
+         //         public void onComplete(@NonNull Task<AuthResult> task) {
+         //           if(task.isSuccessful()){
+         //               Toast.makeText(CreateProfile.this, "Profile created successfully", Toast.LENGTH_SHORT).show();
+         //               startActivity(new Intent(CreateProfile.this, StartUp.class));
+         //           }
+         //           else{
+         //               FirebaseAuthException e = (FirebaseAuthException) task.getException();
+         //               Toast.makeText(CreateProfile.this, "Failed to create profile. " + e.getMessage(), Toast.LENGTH_SHORT).show();
+         //           }
+         //       }
+         //   });
 
 
             // TODO Connect UID from Auth to Firestore -----------------------------------------------------------------------------------------------
-            String userUid = firebaseAuth.getCurrentUser().getUid();
+          //  String userUid = firebaseAuth.getCurrentUser().getUid();
+          //  db.document(userUid).set(userMap);
 
-
-            db.collection("Users")
-                    .add(userMap)
-                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                        @Override
-                        public void onSuccess(DocumentReference documentReference) {
-                            Log.d(TAG, "Document added with ID: " + documentReference.getId());
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Log.w(TAG, "Error adding document");
-                }
-            });
+            //db.collection("Users")
+            //        .add(userMap)
+            //        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            //            @Override
+            //            public void onSuccess(DocumentReference documentReference) {
+            //                Log.d(TAG, "Document added with ID: " + documentReference.getId());
+            //            }
+            //       }).addOnFailureListener(new OnFailureListener() {
+            //    @Override
+            //    public void onFailure(@NonNull Exception e) {
+            //        Log.w(TAG, "Error adding document");
+            //    }
+            //});
         }
     }
 
@@ -131,16 +131,21 @@ public class CreateProfile extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public boolean Validation(String email, String password,String username, double height, double weight, Date dob, String gender){
+    public boolean Validation(String email, String password,String username, double height, double weight, String dob, String gender){
 
         try {
 
-            if(gender != "Male" || gender != "Female") {
-                //setting the gender of the user
-                Toast.makeText(CreateProfile.this, "Please select a gender", Toast.LENGTH_LONG).show();
+
+            //Null validation
+            if (email.equals("") || password.equals("") || username.equals("") || height <=0 || weight <= 0 || dob.equals("") || gender.equals("")) {
+                Toast.makeText(CreateProfile.this, "Please fill out all fields provided", Toast.LENGTH_SHORT).show();
                 return false;
             }
-
+            else if(gender != "Male" || gender != "Female") {
+                //setting the gender of the user
+                Toast.makeText(CreateProfile.this, "Please select a gender", Toast.LENGTH_SHORT).show();
+                return false;
+            }
             if(TextUtils.isEmpty(email)) {
                 Toast.makeText(this, "Please enter Email", Toast.LENGTH_SHORT).show();
                 return false;
@@ -149,13 +154,11 @@ public class CreateProfile extends AppCompatActivity {
                 Toast.makeText(this, "Please enter Password", Toast.LENGTH_SHORT).show();
                 return false;
             }
-            //checking all of the fields are filled out and valid
-            if (username.equals("") || height <= 0 || weight <= 0 || dob.equals("")) {
-                Toast.makeText(CreateProfile.this, "Please fill out all fields provided", Toast.LENGTH_LONG).show();
-                return false;
-            }
-            else if(username.length() < 3 || username.length() > 12) {
-                Toast.makeText(CreateProfile.this, "Username must be between 3 and 12 characters", Toast.LENGTH_LONG).show();
+
+
+            //Boundary validation
+            if(username.length() < 3 || username.length() > 12) {
+                Toast.makeText(CreateProfile.this, "Username must be between 3 and 12 characters", Toast.LENGTH_SHORT).show();
                 return false;
             }
             else if(height < 100 || height > 250){

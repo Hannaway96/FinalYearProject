@@ -1,6 +1,7 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,41 +12,33 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
+import android.widget.Toast;
+
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.QuerySnapshot;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 
 public class StartUp extends AppCompatActivity {
 
+    private FirebaseAuth firebaseAuth;
     final private int REQUEST_INTERNET = 123;
     private Button createProfileBtn;
     private EditText usernameEditTxt, passwordEditTxt;
     private List<String> userList = new ArrayList<String>();
     private String TAG = "MyApp";
-    private FirebaseFirestore db;
-    private FirebaseAuth firebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_up);
 
@@ -56,13 +49,9 @@ public class StartUp extends AppCompatActivity {
 
         //Create an instance of Authorisation link to Firebase
         firebaseAuth = FirebaseAuth.getInstance();
-
-        //create instance of database on firebase
-        db = FirebaseFirestore.getInstance();
-
         createProfileBtn = (Button)findViewById(R.id.Start_Up_Create_Profile_btn);
-        usernameEditTxt = (EditText)findViewById(R.id.editText_Username);
-        passwordEditTxt = (EditText)findViewById(R.id.editText_Password);
+        usernameEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Username);
+        passwordEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Password);
 
         //CheckNetwork checks if the user is connected to the internet
         CheckNetwork();
@@ -120,6 +109,33 @@ public class StartUp extends AppCompatActivity {
     }
 
 
+    public void LogIn(View view) {
+
+        String email = ((EditText) findViewById(R.id.StartUp_EditText_Username)).getText().toString();
+        String password = ((EditText) findViewById(R.id.StartUp_EditText_Password)).getText().toString();
+
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(this, "Please enter Email", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(this, "Please enter Password", Toast.LENGTH_SHORT).show();
+        }
+
+        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(StartUp.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), Menu.class));
+                } else {
+                    Toast.makeText(StartUp.this, "Login Error", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
 
 
     public void CreateProfile(View view){

@@ -15,6 +15,10 @@ public class Workout {
 
     }
 
+
+    //TODO Sort of Workout date to epoch
+
+
     public Workout(int exerciseDate){
         this.workoutDate = exerciseDate;
         this.exercises = new Exercise[25];
@@ -23,6 +27,7 @@ public class Workout {
     public void addExercise(Exercise input) {
 
         for(int i = 0; i <= exercises.length -1; i++){
+
             if(exercises[i] == null){
                 exercises[i] = input;
                 break;

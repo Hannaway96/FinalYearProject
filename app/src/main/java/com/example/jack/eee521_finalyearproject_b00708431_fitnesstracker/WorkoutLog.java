@@ -7,22 +7,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class WorkoutLog extends AppCompatActivity {
 
     Button addExerciseBtn;
     Button saveWorkoutBtn;
     ImageButton backButton;
+    ListView workoutListView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_log);
 
-        //changes the title of the ActionBar
-        //getSupportActionBar().setTitle("Workout Log");
-
         addExerciseBtn = (Button)findViewById(R.id.WorkoutLog_addExerciseBtn);
         saveWorkoutBtn = (Button)findViewById(R.id.workout_Log_SaveWorkoutBtn);
+        workoutListView = (ListView)findViewById(R.id.WorkoutListView);
         backButton = (ImageButton)findViewById(R.id.workoutLog_backBtn);
     }
 
@@ -32,7 +33,23 @@ public class WorkoutLog extends AppCompatActivity {
     }
 
     public void SaveWorkout(View view){
+
+        Toast.makeText(this, "Workout saved Successfully", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(WorkoutLog.this, Menu.class);
         startActivity(intent);
+        finish();
+    }
+
+    public void MenuReturn(View view){
+
+        //Display a Dialog asking if the user wants to quit
+
+        //IF yes then call back Workout Doc and delete it
+
+        //IF no then call saveWorkout
+
+        Intent intent = new Intent(WorkoutLog.this, Menu.class);
+        startActivity(intent);
+        finish();
     }
 }

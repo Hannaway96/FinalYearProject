@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="28dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/editText_Username"
+        app:layout_constraintBottom_toTopOf="@+id/StartUp_EditText_Username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editText_Username"
+        android:id="@+id/StartUp_EditText_Username"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
-        android:id="@+id/editText_Password"
+        android:id="@+id/StartUp_EditText_Password"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -91,7 +91,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Username" />
+        app:layout_constraintTop_toBottomOf="@+id/StartUp_EditText_Username" />
 
     <Button
         android:id="@+id/Start_Up_Create_Profile_btn"
@@ -102,14 +102,14 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:onClick="CreateProfile"
-        android:text="Select Profile"
+        android:onClick="LogIn"
+        android:text="Log In"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Password" />
+        app:layout_constraintTop_toBottomOf="@+id/StartUp_EditText_Password" />
 
     <TextView
         android:id="@+id/create_profile_txtView"

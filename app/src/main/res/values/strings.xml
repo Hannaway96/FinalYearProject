@@ -21,6 +21,7 @@
     <string name="menu_exit">Exit</string>
 
     <string name="WorkoutLog_add_Exercise_btn">Add Exercise</string>
+    <string name="WorkoutLog_View_Past_Workout">View Past Workouts</string>
     <string name="WorkoutLog_Log_TextView">Workout Log</string>
     <string name="WorkoutLog_Save_Workout_Btn">Save Workout</string>
 
@@ -30,5 +31,8 @@
     <string name="AddExercise_SetsTxt"># of Sets</string>
     <string name="AddExercise_RepsTxr"># of Reps</string>
     <string name="AddExercise_Add_Btn">Add</string>
+    <string name="AddExercise_Cancel_Btn">Cancel</string>
+
+    <string name="PastWorkouts_Title">Past Workouts</string>
 
 </resources>

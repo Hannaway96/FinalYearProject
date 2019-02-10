@@ -11,30 +11,23 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
-import com.google.firebase.firestore.QuerySnapshot;
+//import com.google.android.gms.tasks.OnCompleteListener;
+//import com.google.android.gms.tasks.Task;
+//import com.google.firebase.firestore.DocumentReference;
+//import com.google.firebase.firestore.DocumentSnapshot;
+//import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddExercise extends AppCompatActivity {
+public class AddExercise extends AppCompatActivity{
 
-    FirebaseFirestore exerciseDB;
-    DocumentReference docRef;
+    //FirebaseFirestore exerciseDB;
+    //DocumentReference docRef;
 
     private String TAG = "MyApp";
-    Spinner typeSpinner, exerciseSpinner;
-    EditText repsEditText, setsEditText;
+    private Spinner typeSpinner, exerciseSpinner;
+    private EditText repsEditText, setsEditText;
 
     private List<String> exerciseList;
 
@@ -43,8 +36,10 @@ public class AddExercise extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_exercise);
 
-        exerciseDB = FirebaseFirestore.getInstance();
-        docRef = exerciseDB.collection("Exercises").document("Abs");
+        //TODO Firestore isn't working anymore
+        //exerciseDB = FirebaseFirestore.getInstance();
+
+        //docRef = exerciseDB.collection("Exercises").document("Abs");
         exerciseList = new ArrayList<String>();
 
         typeSpinner = (Spinner)findViewById(R.id.addExercise_Type_Spinner);
@@ -53,7 +48,6 @@ public class AddExercise extends AppCompatActivity {
         setsEditText = (EditText)findViewById(R.id.addExercise_Sets_PlainTxt);
 
         getExercises();
-
         exerciseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -65,8 +59,6 @@ public class AddExercise extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
-
             }
         });
     }
@@ -79,33 +71,33 @@ public class AddExercise extends AppCompatActivity {
 
     public void getExercises() {
 
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
+        //docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        //    @Override
+        //    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+        //        if (task.isSuccessful()) {
+        //            DocumentSnapshot document = task.getResult();
+        //            if (document.exists()) {
 
-                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
+        //                Log.d(TAG, "DocumentSnapshot data: " + document.getData());
 
-                        for(int i = 0; i < document.getData().size(); i++){
+        //                for(int i = 0; i < document.getData().size(); i++){
 
-                            exerciseList.add(document.get(i + "").toString());
-                        }
+        //                    exerciseList.add(document.get(i + "").toString());
+        //                }
 
-                    } else {
-                        Log.d(TAG, "No such document");
-                    }
+        //            } else {
+        //               Log.d(TAG, "No such document");
+        //            }
 
-                } else {
-                    Log.d(TAG, "get failed with ", task.getException());
-                }
-            }
-        });
+        //      } else {
+        //            Log.d(TAG, "get failed with ", task.getException());
+        //        }
+        //    }
+        //});
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, exerciseList);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         exerciseSpinner.setAdapter(dataAdapter);
-    }
 
+    }
 }
