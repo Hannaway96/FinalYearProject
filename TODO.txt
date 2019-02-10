@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------
+-----------------------------TODO----------------------------------------
+-------------------------------------------------------------------------
+
+StartUp{
+	-Login as a user
+}
+
+CreateProfile{
+	-Add Authenticated user to firestore
+	-Create user and add into user table
+		-Be able to validate Date correctly
+		-Connect firebaseAuth to Firestore
+}
+
+Menu{
+	**Some design Tweaks**
+}
+
+WorkoutLog{
+	-Connect View past workouts to activity
+	-Call workout that exercise has been added too
+	-If they back out without saving then remove workout
+}
+
+AddExercise{
+	-Create Workout
+	-Add Exercise to that workout
+}
+
+
+
+
+	
+
+
