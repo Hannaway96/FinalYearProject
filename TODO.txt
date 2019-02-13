@@ -7,9 +7,7 @@ StartUp{
 }
 
 CreateProfile{	
-	-Create user and add into user table
-		-Be able to validate Date correctly
-		-Connect firebaseAuth to Firestore
+	-Be able to validate Date correctly
 }
 
 Menu{
