@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "547649743438-spov3k8q1c1ro8ak0l0hit9r6bk4baeq.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker",
-            "certificate_hash": "e8c177de3bac4794531c39c18566b944ed74f7c0"
-          }
-        },
-        {
           "client_id": "547649743438-o550djqsgk4lhpm2uepiehins5bofbrd.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

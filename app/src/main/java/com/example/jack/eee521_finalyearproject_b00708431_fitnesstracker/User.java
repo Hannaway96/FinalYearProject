@@ -1,14 +1,12 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
-import java.util.Date;
-
 public class User {
 
     private String userEmail;
     private String userName;
     private double userHeight;
     private double userWeight;
-    private Date userDOB;
+    private String userDOB;
     private String userGender;
     private int userExercises_Completed;
     private int userWorkouts_Completed;
@@ -17,7 +15,7 @@ public class User {
 
     }
 
-    public User(String userEmail, String userName, double userHeight, double userWeight, Date userDOB, String userGender) {
+    public User(String userEmail, String userName, double userHeight, double userWeight, String userDOB, String userGender) {
         this.userEmail = userEmail;
         this.userName = userName;
         this.userHeight = userHeight;
@@ -58,11 +56,11 @@ public class User {
         this.userWeight = userWeight;
     }
 
-    public Date getUserDOB() {
+    public String getUserDOB() {
         return userDOB;
     }
 
-    public void setUserDOB(Date userDOB) {
+    public void setUserDOB(String userDOB) {
         this.userDOB = userDOB;
     }
 

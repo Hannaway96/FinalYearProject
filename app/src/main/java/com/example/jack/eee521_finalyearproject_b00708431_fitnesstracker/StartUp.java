@@ -42,13 +42,14 @@ public class StartUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_up);
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
         //Checks if the user wishes to close the application
         if(getIntent().getBooleanExtra("EXIT", false)){
             finish();
         }
-
         //Create an instance of Authorisation link to Firebase
-        firebaseAuth = FirebaseAuth.getInstance();
+
         createProfileBtn = (Button)findViewById(R.id.Start_Up_Create_Profile_btn);
         usernameEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Username);
         passwordEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Password);
@@ -134,11 +135,12 @@ public class StartUp extends AppCompatActivity {
                 }
             }
         });
-
     }
 
 
     public void CreateProfile(View view){
+
+        //Opens CreateProfile Activity
         Intent intent = new Intent(StartUp.this, CreateProfile.class);
         startActivity(intent);
     }
