@@ -33,6 +33,14 @@
     <string name="AddExercise_Add_Btn">Add</string>
     <string name="AddExercise_Cancel_Btn">Cancel</string>
 
+    <string-array name="ExerciseTypes">
+        <item>Abs</item>
+        <item>Arms</item>
+        <item>Back</item>
+        <item>Chest</item>
+        <item>Legs</item>
+    </string-array>
+
     <string name="PastWorkouts_Title">Past Workouts</string>
 
 </resources>

@@ -69,7 +69,6 @@ public class CreateProfile extends AppCompatActivity {
         } else if (femaleRadBtn.isChecked() == true) {
             gender = "Female";
         }
-
         //Instantiate new User class and add values from Create profile into values.
         final User user = new User(userEmail, userName, userHeight, userWeight, userDob, gender);
 

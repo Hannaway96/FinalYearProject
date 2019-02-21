@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Workout {
 
     private int workoutDate;
-    private Exercise[] exercises;
+    private ArrayList<Exercise> exercises;
     private int totalExercises;
     private int totalReps;
     private int totalSets;
@@ -19,27 +19,20 @@ public class Workout {
     //TODO Sort of Workout date to epoch
 
 
-    public Workout(int exerciseDate){
-        this.workoutDate = exerciseDate;
-        this.exercises = new Exercise[25];
+    public Workout(int workoutDate){
+        this.workoutDate = workoutDate;
+        this.exercises = new ArrayList<Exercise>();
     }
 
     public void addExercise(Exercise input) {
 
-        for(int i = 0; i <= exercises.length -1; i++){
-
-            if(exercises[i] == null){
-                exercises[i] = input;
-                break;
-            }
-        }
+        exercises.add(input);
     }
 
     public void removeExercise(Exercise input){
-
-        for(int i = 0; i <= exercises.length -1; i++){
-            if(exercises[i].getExerciseName() == input.getExerciseName()){
-                exercises[i] = null;
+        for(int i=0; i<=exercises.size(); i++){
+            if (exercises.get(i) == input) {
+                exercises.remove(input);
             }
         }
     }
@@ -51,7 +44,7 @@ public class Workout {
     public void setTotalExercises() {
 
         int count = 0;
-        for(int i =0; i <= exercises.length -1; i++){
+        for(int i =0; i <= exercises.size(); i++){
             count++;
         }
 
@@ -65,9 +58,9 @@ public class Workout {
     public void setTotalReps() {
         int repNum = 0;
 
-        for(int i = 0; i <= exercises.length-1; i++){
+        for(int i = 0; i <= exercises.size(); i++){
 
-            repNum += exercises[i].getNoOfReps();
+            repNum += exercises.get(i).getNoOfReps();
         }
 
         this.totalReps = repNum;
@@ -80,9 +73,9 @@ public class Workout {
     public void setTotalSets() {
         int setNum = 0;
 
-        for(int i = 0; i <= exercises.length -1; i++){
+        for(int i = 0; i <= exercises.size(); i++){
 
-            setNum += exercises[i].getNoOfSets();
+            setNum += exercises.get(i).getNoOfSets();
         }
 
         this.totalSets = setNum;

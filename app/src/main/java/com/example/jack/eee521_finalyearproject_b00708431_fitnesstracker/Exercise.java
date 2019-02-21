@@ -1,10 +1,12 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
-public class Exercise {
+import java.io.Serializable;
 
-    private enum ExerciseType {Abs, Arms, Back, Chest, Legs}
+public class Exercise implements Serializable {
 
-    private ExerciseType exerciseType;
+    enum ExerciseType {Abs, Arms, Back, Chest, Legs}
+
+    private String exerciseType;
     private String exerciseName;
     private int noOfReps;
     private int noOfSets;
@@ -14,18 +16,18 @@ public class Exercise {
 
     }
 
-    public Exercise(ExerciseType exerciseType, String exerciseName, int noOfReps, int noOfSets){
+    public Exercise(String exerciseType, String exerciseName, int noOfReps, int noOfSets){
         this.exerciseType = exerciseType;
         this.exerciseName = exerciseName;
         this.noOfReps = noOfReps;
         this.noOfSets = noOfSets;
     }
 
-    public ExerciseType getExerciseType(){
+    public String getExerciseType(){
         return exerciseType;
     }
 
-    public void setExerciseType(ExerciseType exerciseType){
+    public void setExerciseType(String exerciseType){
         this.exerciseType = exerciseType;
     }
 

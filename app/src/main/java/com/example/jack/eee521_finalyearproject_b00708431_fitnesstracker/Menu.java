@@ -22,7 +22,7 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         firebaseAuth = FirebaseAuth.getInstance();                      //BE WARY OF THIS
-        //FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
 
         //Checks if the user has requested that the program should exit
         if(getIntent().getBooleanExtra("EXIT", false)){
