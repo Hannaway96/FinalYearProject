@@ -18,16 +18,19 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddExercise extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class AddExercise extends AppCompatActivity{
 
 
     FirebaseFirestore exerciseDB;
     DocumentReference docRef;
     private String TAG = "MyApp";
+    public String exerciseType = "";
     private Spinner typeSpinner, exerciseSpinner;
     private EditText repsEditText, setsEditText;
 
@@ -39,26 +42,21 @@ public class AddExercise extends AppCompatActivity implements AdapterView.OnItem
         setContentView(R.layout.activity_add_exercise);
 
         exerciseDB = FirebaseFirestore.getInstance();
-        docRef = exerciseDB.collection("Exercises").document("Abs");
         exerciseList = new ArrayList<String>();
 
         typeSpinner = (Spinner)findViewById(R.id.addExercise_Type_Spinner);
-        ArrayAdapter<CharSequence> typeAdapter = ArrayAdapter.createFromResource(this, R.array.ExerciseTypes, android.R.layout.simple_spinner_item);
-        typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        typeSpinner.setAdapter(typeAdapter);
-
-        //typeSpinner.setOnItemClickListener(this, );
         exerciseSpinner = (Spinner)findViewById(R.id.addExercise_Exercise_Spinner);
         repsEditText = (EditText) findViewById(R.id.addExercise_Rep_PlainText);
         setsEditText = (EditText)findViewById(R.id.addExercise_Sets_PlainTxt);
 
-        getExercises();
+        ArrayAdapter<CharSequence> typeAdapter = ArrayAdapter.createFromResource(this, R.array.ExerciseTypes, android.R.layout.simple_spinner_item);
+        typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        typeSpinner.setAdapter(typeAdapter);
+        typeAdapter.notifyDataSetChanged();
+
         exerciseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                exerciseSpinner.getSelectedItem();
-                Log.d(TAG, exerciseSpinner.getSelectedItem().toString());
 
             }
 
@@ -66,17 +64,31 @@ public class AddExercise extends AppCompatActivity implements AdapterView.OnItem
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+
+        typeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                exerciseType = typeSpinner.getSelectedItem().toString();
+                GetExercises(exerciseType);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
 
 
     public void AddExerciseToWorkout(View view){
 
-        String exerciseName = exerciseSpinner.getSelectedItem().toString();
         String exerciseType = typeSpinner.getSelectedItem().toString();
+        String exerciseName = exerciseSpinner.getSelectedItem().toString();
         int noReps = Integer.parseInt(repsEditText.getText().toString());
         int noSets = Integer.parseInt(setsEditText.getText().toString());
 
-        Exercise exercise = new Exercise(exerciseName, exerciseType, noReps, noSets);
+        Exercise exercise = new Exercise(exerciseType, exerciseName, noReps, noSets);
 
         Toast.makeText(this, "Exercise Added to workout", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(AddExercise.this, WorkoutLog.class);
@@ -84,11 +96,10 @@ public class AddExercise extends AppCompatActivity implements AdapterView.OnItem
         startActivity(intent);
     }
 
-    public void getTypes(){
-        //TODO functionality for Exercise and type spinners
-    }
+    public void GetExercises(String exerciseType) {
 
-    public void getExercises() {
+        exerciseList = new ArrayList<String>(); //Equal exerciseList as a new List so that the list doesn't append on to the end
+        docRef = exerciseDB.collection("Exercises").document(exerciseType);
 
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -96,12 +107,9 @@ public class AddExercise extends AppCompatActivity implements AdapterView.OnItem
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-
-                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-
+                        //If the document exists then populate the exercise list with all of the exercises from that document
                         for(int i = 0; i < document.getData().size()-1; i++){
-
-                            exerciseList.add(document.get(i + "").toString());
+                            exerciseList.add(document.get(i+"").toString());
                         }
                     } else {
                        Log.d(TAG, "No such document");
@@ -115,16 +123,10 @@ public class AddExercise extends AppCompatActivity implements AdapterView.OnItem
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, exerciseList);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         exerciseSpinner.setAdapter(dataAdapter);
+        dataAdapter.notifyDataSetChanged();
 
+        //TODO Have exercise stay on spinner after it has been selected.
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
+    //TODO have some validation in this as well!!!
 }

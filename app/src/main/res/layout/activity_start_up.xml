@@ -8,13 +8,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="385dp"
+        android:layout_height="412dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="28dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/StartUp_EditText_Username"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -29,6 +30,7 @@
             android:text="@string/start_up_welcome"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="24sp"
+            android:textStyle="bold"
             tools:layout_editor_absoluteX="28dp"
             tools:layout_editor_absoluteY="16dp" />
 
@@ -40,16 +42,22 @@
             android:fontFamily="sans-serif-condensed-light"
             android:paddingBottom="40dp"
             android:text="@string/start_up_welcome_Desc"
+            android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="18sp"
+            android:textStyle="italic"
             tools:layout_editor_absoluteX="43dp"
             tools:layout_editor_absoluteY="69dp" />
 
         <ImageView
             android:id="@+id/StartUp_imgView"
-            android:layout_width="match_parent"
-            android:layout_height="251dp"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:adjustViewBounds="false"
+            android:background="@drawable/round_outline"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/welcome_image"
             tools:layout_editor_absoluteX="14dp"
             tools:layout_editor_absoluteY="136dp" />
@@ -67,6 +75,7 @@
         android:fontFamily="sans-serif-condensed-light"
         android:hint="Username"
         android:inputType="textEmailAddress"
+        android:text="jack@mail.com"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -86,6 +95,7 @@
         android:fontFamily="sans-serif-condensed-light"
         android:hint="Password"
         android:inputType="textPassword"
+        android:text="password"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -101,10 +111,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/rounder_edge"
+        android:backgroundTint="@color/themeColourStart"
         android:fontFamily="sans-serif-condensed-light"
         android:onClick="LogIn"
         android:text="Log In"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/cardview_light_background"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

@@ -42,5 +42,6 @@
     </string-array>
 
     <string name="PastWorkouts_Title">Past Workouts</string>
+    <string name="PastWorkout_Return_Btn">Return</string>
 
 </resources>

@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#1F30EC</color>
     <color name="colorbutton">#EEEEEE</color>
+    <color name="themeColourStart">#0078ff</color>
+    <color name="themeColourEnd">#f0f8ff</color>
 </resources>

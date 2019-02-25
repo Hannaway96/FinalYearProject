@@ -16,6 +16,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,6 +34,7 @@ public class StartUp extends AppCompatActivity {
     final private int REQUEST_INTERNET = 123;
     private Button createProfileBtn;
     private EditText usernameEditTxt, passwordEditTxt;
+    private ImageView imageView;
     private List<String> userList = new ArrayList<String>();
     private String TAG = "MyApp";
 
@@ -53,6 +55,10 @@ public class StartUp extends AppCompatActivity {
         createProfileBtn = (Button)findViewById(R.id.Start_Up_Create_Profile_btn);
         usernameEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Username);
         passwordEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Password);
+        imageView = (ImageView)findViewById(R.id.StartUp_imgView);
+
+
+        imageView.setClipToOutline(true);
 
         //CheckNetwork checks if the user is connected to the internet
         CheckNetwork();

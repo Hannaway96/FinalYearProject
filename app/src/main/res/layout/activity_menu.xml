@@ -12,14 +12,15 @@
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="@string/menu_Title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Menu_Scroll_View"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
@@ -64,8 +65,9 @@
                 app:layout_constraintTop_toBottomOf="@+id/Menu_TitleTxtView">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/round_outline"
                     android:orientation="vertical"
                     tools:ignore="UseCompoundDrawables">
 
@@ -82,11 +84,13 @@
 
                     <ImageView
                         android:id="@+id/Menu_WorkoutLog_imgview"
-                        android:layout_width="370dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:background="@drawable/rounder_edge"
+                        android:adjustViewBounds="false"
+                        android:background="@drawable/round_outline"
                         android:contentDescription="Logging Workout"
+                        android:cropToPadding="false"
                         android:scaleType="centerCrop"
                         android:visibility="visible"
                         app:srcCompat="@drawable/workout_tracker_menu_image" />
@@ -112,10 +116,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/Menu_WorkoutLog_card_view">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/rounder_edge"
                     android:gravity="center"
+                    android:background="@drawable/round_outline"
                     android:orientation="vertical"
                     tools:ignore="UseCompoundDrawables">
 
@@ -132,11 +136,13 @@
 
                     <ImageView
                         android:id="@+id/Menu_WorkoutGen_imgview"
-                        android:layout_width="370dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:background="@drawable/shape"
+                        android:adjustViewBounds="false"
+                        android:background="@drawable/round_outline"
                         android:contentDescription="Logging Workout"
+                        android:cropToPadding="false"
                         android:scaleType="centerCrop"
                         android:visibility="visible"
                         app:srcCompat="@drawable/workout_generator_menu_image" />
@@ -164,7 +170,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/shape"
                     android:orientation="vertical"
                     tools:ignore="UseCompoundDrawables">
 
@@ -186,7 +191,6 @@
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@drawable/shape"
                         android:contentDescription="Logging Workout"
                         android:scaleType="fitStart"
                         app:srcCompat="@drawable/exit_menu_image" />

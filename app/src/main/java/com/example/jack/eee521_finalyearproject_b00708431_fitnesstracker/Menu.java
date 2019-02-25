@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -14,6 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Menu extends AppCompatActivity {
 
     CardView workoutLogCardView, workoutGenCardView, exitCardView;
+    ImageView workoutLogImg, workoutGenImg, exitImg;
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -33,6 +35,14 @@ public class Menu extends AppCompatActivity {
         workoutLogCardView = (CardView)findViewById(R.id.Menu_WorkoutLog_card_view);
         workoutGenCardView = (CardView)findViewById(R.id.Menu_WorkoutGen_card_view);
         exitCardView = (CardView)findViewById(R.id.Menu_Exit_CardView);
+        workoutLogImg = (ImageView)findViewById(R.id.Menu_WorkoutLog_imgview);
+        workoutGenImg = (ImageView)findViewById(R.id.Menu_WorkoutGen_imgview);
+        exitImg = (ImageView)findViewById(R.id.Menu_Exit_ImgView);
+
+        //Have to manually set the image views to round their corners
+        workoutLogImg.setClipToOutline(true);
+        workoutGenImg.setClipToOutline(true);
+        exitImg.setClipToOutline(true);
     }
 
 
