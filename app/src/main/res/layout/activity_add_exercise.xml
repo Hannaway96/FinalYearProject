@@ -171,6 +171,7 @@
         android:background="@drawable/rounder_edge"
         android:backgroundTint="@color/themeColourStart"
         android:fontFamily="sans-serif-condensed-light"
+        android:onClick="Return"
         android:text="@string/AddExercise_Cancel_Btn"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/cardview_light_background"

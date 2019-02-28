@@ -1,10 +1,12 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
-import java.io.Serializable;
 
-public class Exercise implements Serializable {
+import android.os.Parcel;
+import android.os.Parcelable;
 
-    enum ExerciseType {Abs, Arms, Back, Chest, Legs}
+public class Exercise implements Parcelable {
+
+    //enum ExerciseType {Abs, Arms, Back, Chest, Legs}
 
     private String exerciseType;
     private String exerciseName;
@@ -16,12 +18,47 @@ public class Exercise implements Serializable {
 
     }
 
+    //Standard Constructor
     public Exercise(String exerciseType, String exerciseName, int noOfReps, int noOfSets){
         this.exerciseType = exerciseType;
         this.exerciseName = exerciseName;
         this.noOfReps = noOfReps;
         this.noOfSets = noOfSets;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    //Writes the current Class to parcel
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.exerciseType);
+        dest.writeString(this.exerciseName);
+        dest.writeInt(this.noOfReps);
+        dest.writeInt(this.noOfSets);
+    }
+
+    //Reads from parcel
+    protected Exercise(Parcel in){
+        this.exerciseType = in.readString();
+        this.exerciseName = in.readString();
+        this.noOfReps = in.readInt();
+        this.noOfSets = in.readInt();
+    }
+
+    public static final Creator<Exercise> CREATOR = new Creator<Exercise>() {
+        @Override
+        public Exercise createFromParcel(Parcel source) {
+            return new Exercise(source);
+        }
+
+        @Override
+        public Exercise[] newArray(int size) {
+            return new Exercise[size];
+        }
+    };
 
     public String getExerciseType(){
         return exerciseType;
@@ -54,4 +91,6 @@ public class Exercise implements Serializable {
     public void setNoOfSets(int noOfSets) {
         this.noOfSets = noOfSets;
     }
+
+
 }

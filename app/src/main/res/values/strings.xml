@@ -33,6 +33,9 @@
     <string name="AddExercise_Add_Btn">Add</string>
     <string name="AddExercise_Cancel_Btn">Cancel</string>
 
+    <string name="PastWorkouts_Title">Past Workouts</string>
+    <string name="PastWorkout_Return_Btn">Return</string>
+
     <string-array name="ExerciseTypes">
         <item>Abs</item>
         <item>Arms</item>
@@ -41,7 +44,84 @@
         <item>Legs</item>
     </string-array>
 
-    <string name="PastWorkouts_Title">Past Workouts</string>
-    <string name="PastWorkout_Return_Btn">Return</string>
+    <string-array name = "AbExercises">
+        <item>Bicycle Crunches</item>
+        <item>Crossover Crunch</item>
+        <item>Heel Touch</item>
+        <item>Leg Raises</item>
+        <item>Mountain Climbers</item>
+        <item>Plank</item>
+        <item>Russian Twists</item>
+        <item>Side Plank</item>
+        <item>Sit-Ups</item>
+        <item>V-Ups</item>
+    </string-array>
+
+    <string-array name="ArmExercises">
+        <item>Barbell Curl</item>
+        <item>Cable Curl</item>
+        <item>Cable Front Raises</item>
+        <item>Diamond Push ups</item>
+        <item>Dumbbell Front Raises</item>
+        <item>Dumbbell Shoulder Press</item>
+        <item>Machine Shoulder Press</item>
+        <item>Over Head Tricep Extensions</item>
+        <item>Over Head Tricep Press</item>
+        <item>Seated Bent-over Rear Deltoid Rows</item>
+        <item>Seated Dumbbell Curl</item>
+        <item>Side Lateral Raises</item>
+        <item>Standing Dumbbell Curl</item>
+        <item>Tricep Dip</item>
+        <item>Tricep Pulldown</item>
+    </string-array>
+
+    <string-array name="BackExercises">
+        <item>Barbell Deadlift</item>
+        <item>Bent-over Barbell Deadlift</item>
+        <item>Cable Row</item>
+        <item>Chin-Up</item>
+        <item>Face Pulls</item>
+        <item>Inverted Rows</item>
+        <item>Lateral Pulldown</item>
+        <item>Pull up (Wide/Close Grip)</item>
+        <item>Rear Deltoid Flies</item>
+        <item>Rear Deltoid Row</item>
+        <item>Single Arm Dumbbell Row</item>
+        <item>Sumo Deadlift</item>
+        <item>Upright Row</item>
+        <item>Wide Grip Seated Cable Row</item>
+    </string-array>
+    
+    <string-array name="ChestExercises">
+        <item>Cable Chest Fly</item>
+        <item>Decline Bench Press</item>
+        <item>Decline Dumbbell Bench Press</item>
+        <item>Decline Push-Up</item>
+        <item>Dumbbell Fly</item>
+        <item>Flat Bench Press</item>
+        <item>Flat Dumbbell Bench Press</item>
+        <item>Incline Bench Press</item>
+        <item>Incline Dumbbell Bench Press</item>
+        <item>Push-Ups</item>
+        <item>Push-Up and Rotation</item>
+        <item>Seated Machine Chest Fly</item>
+        <item>Seated Machine Chest Press</item>
+        <item>Spider-Man Push-Ups</item>
+        <item>Staggered Push-Ups</item>
+    </string-array>
+
+    <string-array name="LegExercises">
+        <item>Glute Bridges</item>
+        <item>Laying Leg Curl</item>
+        <item>Leg Extension</item>
+        <item>Leg Press</item>
+        <item>Lunges</item>
+        <item>Seated Leg Curl</item>
+        <item>Seated Squat</item>
+        <item>Seated Thigh Abductores</item>
+        <item>Seated Thigh Aductores</item>
+        <item>Standing Calf Raise</item>
+        <item>Squat(Back/Front/Sumo)</item>
+    </string-array>
 
 </resources>
