@@ -8,6 +8,7 @@ import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -40,8 +41,19 @@ public class WorkoutLog extends AppCompatActivity {
 
         workoutListView = (ListView)findViewById(R.id.WorkoutListView);
         //Creating a custom list view adapter to display exercise details
-        ExerciseListAdapter adapter = new ExerciseListAdapter(this, R.layout.adapter_view_layout, exerciseList);
+        final ExerciseListAdapter adapter = new ExerciseListAdapter(this, R.layout.adapter_view_layout, exerciseList);
         workoutListView.setAdapter(adapter);
+
+
+        //Long click alerts the user if they wish to delete that specific item in the list
+        workoutListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                exerciseList.remove(position);
+                adapter.notifyDataSetChanged();
+                return false;
+            }
+        });
     }
 
     public void AddExercise(View view){
