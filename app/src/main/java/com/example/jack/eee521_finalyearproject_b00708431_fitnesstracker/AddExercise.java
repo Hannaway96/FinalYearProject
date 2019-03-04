@@ -1,28 +1,16 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class AddExercise extends AppCompatActivity{
 
@@ -117,16 +105,32 @@ public class AddExercise extends AppCompatActivity{
 
         String exerciseType = typeSpinner.getSelectedItem().toString();
         String exerciseName = exerciseSpinner.getSelectedItem().toString();
-        int noReps = Integer.parseInt(repsEditText.getText().toString());
-        int noSets = Integer.parseInt(setsEditText.getText().toString());
+        int noReps=0;
+        int noSets=0;
 
-        Exercise exercise = new Exercise(exerciseType, exerciseName, noReps, noSets);
-        tempList.add(exercise);
+        //ensure data is valid
+        if(TextUtils.isEmpty(repsEditText.getText())){
+            Toast.makeText(this, "Enter # of Reps", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            noReps = Integer.parseInt(repsEditText.getText().toString());
+        }
+        if(TextUtils.isEmpty(setsEditText.getText())) {
+            Toast.makeText(this, "Enter # of Sets", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            noSets = Integer.parseInt(setsEditText.getText().toString());
+        }
 
-        Toast.makeText(this, "Exercise Added to workout", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(AddExercise.this, WorkoutLog.class);
-        intent.putExtra("newList", tempList);
-        startActivity(intent);
+        if(exerciseName != null && exerciseType != null && noReps>0 && noSets>0){
+            Exercise exercise = new Exercise(exerciseType, exerciseName, noReps, noSets);
+            tempList.add(exercise);
+
+            Toast.makeText(this, "Exercise Added to workout", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(AddExercise.this, WorkoutLog.class);
+            intent.putExtra("newList", tempList);
+            startActivity(intent);
+        }
     }
 
     public void Return(View view){
@@ -134,5 +138,4 @@ public class AddExercise extends AppCompatActivity{
         startActivity(intent);
         finish();
     }
-
 }

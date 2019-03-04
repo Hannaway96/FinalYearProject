@@ -14,6 +14,7 @@ public class Workout implements Parcelable {
     private int totalExercises;
     private int totalReps;
     private int totalSets;
+    private String userUID;
 
     public Workout(){
 
@@ -36,6 +37,7 @@ public class Workout implements Parcelable {
         dest.writeInt(this.totalExercises);
         dest.writeInt(this.totalReps);
         dest.writeInt(this.totalSets);
+        dest.writeString(this.userUID);
     }
 
     protected Workout(Parcel in){
@@ -44,6 +46,7 @@ public class Workout implements Parcelable {
         this.totalExercises = in.readInt();
         this.totalReps = in.readInt();
         this.totalSets = in.readInt();
+        this.userUID = in.readString();
     }
 
     public static final Creator<Workout> CREATOR = new Creator<Workout>() {
@@ -68,7 +71,7 @@ public class Workout implements Parcelable {
     }
 
     public void removeExercise(Exercise input){
-        for(int i=0; i<=exercises.size()-1; i++){
+        for(int i=0; i<exercises.size(); i++){
             if (exercises.get(i) == input) {
                 exercises.remove(input);
             }
@@ -82,7 +85,7 @@ public class Workout implements Parcelable {
     public void setTotalExercises() {
 
         int count = 0;
-        for(int i =0; i <= exercises.size(); i++){
+        for(int i =0; i <exercises.size(); i++){
             count++;
         }
 
@@ -95,13 +98,17 @@ public class Workout implements Parcelable {
 
     public void setTotalReps() {
         int repNum = 0;
+        int timesRep;
+        int tot = 0;
 
-        for(int i = 0; i <= exercises.size()-1; i++){
+        for(int i = 0; i <exercises.size(); i++){
 
-            repNum += exercises.get(i).getNoOfReps();
+            repNum = exercises.get(i).getNoOfReps();
+            timesRep = repNum * exercises.get(i).getNoOfSets();
+            tot += timesRep;
         }
 
-        this.totalReps = repNum;
+        this.totalReps = tot;
     }
 
     public int getTotalSets() {
@@ -111,13 +118,18 @@ public class Workout implements Parcelable {
     public void setTotalSets() {
         int setNum = 0;
 
-        for(int i = 0; i <= exercises.size()-1; i++){
-
+        for(int i = 0; i <exercises.size(); i++){
             setNum += exercises.get(i).getNoOfSets();
         }
 
         this.totalSets = setNum;
     }
 
+    public String getUserUID() {
+        return userUID;
+    }
 
+    public void setUserUID(String userUID) {
+        this.userUID = userUID;
+    }
 }

@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".AddExercise">
 
     <TextView
         android:id="@+id/addExercise_AddExerciseTitleTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="@string/AddExercise_Title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,20 +28,17 @@
         android:id="@+id/addExercise_Type_txtView"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
         android:text="@string/AddExercise_type_txt"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_AddExerciseTitleTxtView" />
 
     <Spinner
         android:id="@+id/addExercise_Type_Spinner"
-        android:layout_width="225dp"
+        android:layout_width="226dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:dropDownWidth="match_parent"
@@ -48,18 +49,14 @@
 
     <TextView
         android:id="@+id/addExercise_ExerciseTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="68dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/AddExercise_exerciseName_txt"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_Type_Spinner"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_Type_Spinner" />
 
     <Spinner
@@ -75,24 +72,20 @@
 
     <TextView
         android:id="@+id/addExercise_RepTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="77dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/AddExercise_RepsTxr"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_Exercise_Spinner"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_Exercise_Spinner" />
 
     <EditText
         android:id="@+id/addExercise_Rep_PlainText"
         android:layout_width="225dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="8,10,12, etc..."
@@ -102,53 +95,47 @@
 
     <TextView
         android:id="@+id/addExercise_SetsTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="73dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/AddExercise_SetsTxt"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_Rep_PlainText"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_Rep_PlainText" />
 
     <EditText
         android:id="@+id/addExercise_Sets_PlainTxt"
         android:layout_width="225dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="1,2,3 etc..."
         android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/addExercise_ExerciseImgView"
         app:layout_constraintStart_toStartOf="@+id/addExercise_SetsTxt"
-        app:layout_constraintTop_toBottomOf="@+id/addExercise_SetsTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_SetsTxt"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/addExercise_ExerciseImgView"
         android:layout_width="225dp"
-        android:layout_height="169dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/addBtn_Btn"
+        android:layout_marginBottom="188dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintHorizontal_bias="0.404"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addExercise_Sets_PlainTxt"
-        app:layout_constraintVertical_bias="0.19999999"
         tools:srcCompat="@tools:sample/avatars[0]" />
 
     <Button
         android:id="@+id/addBtn_Btn"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="120dp"
         android:background="@drawable/rounder_edge"
         android:backgroundTint="@color/themeColourStart"
         android:fontFamily="sans-serif-condensed-light"
@@ -159,15 +146,15 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/addExercise_ExerciseImgView" />
 
     <Button
         android:id="@+id/addExercise_CancelBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="120dp"
         android:background="@drawable/rounder_edge"
         android:backgroundTint="@color/themeColourStart"
         android:fontFamily="sans-serif-condensed-light"
@@ -179,7 +166,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toEndOf="@+id/addBtn_Btn" />
 
 </android.support.constraint.ConstraintLayout>

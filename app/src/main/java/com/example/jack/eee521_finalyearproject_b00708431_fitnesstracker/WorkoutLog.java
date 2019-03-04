@@ -4,20 +4,29 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 
 public class WorkoutLog extends AppCompatActivity {
 
+    private FirebaseFirestore db;
+    private FirebaseAuth firebaseAuth;
     Button addExerciseBtn;
     Button saveWorkoutBtn;
     ImageButton backButton;
@@ -30,30 +39,41 @@ public class WorkoutLog extends AppCompatActivity {
         setContentView(R.layout.activity_workout_log);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); // Sets screen to portrait
 
-        //Retrieve Parceable workout from AddExercise and equal it's exercises to this current exercises
+        //Get instance of Firebase firestore
+        db = FirebaseFirestore.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        //Retrieve Parceable workout from AddExercise and equal it's exercises to this current exerciseList
         if(getIntent().getParcelableArrayListExtra("newList") != null){
-            exerciseList= getIntent().getParcelableArrayListExtra("newList");
+            exerciseList = getIntent().getParcelableArrayListExtra("newList");
         }
 
         addExerciseBtn = (Button)findViewById(R.id.WorkoutLog_addExerciseBtn);
         saveWorkoutBtn = (Button)findViewById(R.id.workout_Log_SaveWorkoutBtn);
         backButton = (ImageButton)findViewById(R.id.workoutLog_backBtn);
-
         workoutListView = (ListView)findViewById(R.id.WorkoutListView);
+
         //Creating a custom list view adapter to display exercise details
         final ExerciseListAdapter adapter = new ExerciseListAdapter(this, R.layout.adapter_view_layout, exerciseList);
         workoutListView.setAdapter(adapter);
 
-
-        //Long click alerts the user if they wish to delete that specific item in the list
-        workoutListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        //Allows the user to delete an item within the list view
+        SwipeDismissListViewTouchListener touchListener = new SwipeDismissListViewTouchListener(workoutListView, new SwipeDismissListViewTouchListener.DismissCallbacks() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                exerciseList.remove(position);
-                adapter.notifyDataSetChanged();
-                return false;
+            public boolean canDismiss(int position) {
+                return true;
+            }
+
+            @Override
+            public void onDismiss(ListView listView, int[] reverseSortedPositions) {
+                for(int position : reverseSortedPositions){
+                    exerciseList.remove(position);
+                    adapter.notifyDataSetChanged();
+                    Toast.makeText(WorkoutLog.this, "Exercise deleted", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+        workoutListView.setOnTouchListener(touchListener);
     }
 
     public void AddExercise(View view){
@@ -69,7 +89,66 @@ public class WorkoutLog extends AppCompatActivity {
 
     public void SaveWorkout(View view){
 
-        //TODO add workout to firestore.
+        //Creating workout
+        final Workout workout = new Workout();
+        final User user = new User();
+
+        //Add workout details to workout object
+        for(int i=0; i<exerciseList.size(); i++){
+            workout.addExercise(exerciseList.get(i));
+        }
+
+        workout.setTotalExercises();
+        workout.setTotalReps();
+        workout.setTotalSets();
+        String userUid = firebaseAuth.getCurrentUser().getUid();
+        workout.setUserUID(userUid);
+
+        //Saving workout to firebase
+        db.collection("Workouts").document().set(workout);
+
+        //UPDATING USER STATS
+        //Get the current user's document on firebase
+        final DocumentReference docRef = db.collection("Users").document(userUid);
+
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                    if(document.exists()){
+
+                        //set the user's details to user object
+                        user.setUserName(document.get("userName").toString());
+                        user.setUserHeight(Double.parseDouble(document.get("userHeight").toString()));
+                        user.setUserWeight(Double.parseDouble(document.get("userWeight").toString()));
+                        user.setUserDOB(document.get("userDOB").toString());
+                        user.setUserGender(document.get("userGender").toString());
+                        user.setUserExercises_Completed(Integer.parseInt(document.get("userExercises_Completed").toString()));
+                        user.setUserWorkouts_Completed(Integer.parseInt(document.get("userWorkouts_Completed").toString()));
+
+                        //Increasing users total workouts count
+                        int currWorkoutCompleted = user.getUserWorkouts_Completed();
+                        currWorkoutCompleted++;
+
+                        //Increasing user's total exercises count
+                        int currExercisesCompleted = user.getUserExercises_Completed();
+                        currExercisesCompleted += workout.getTotalExercises();
+
+                        user.setUserWorkouts_Completed(currWorkoutCompleted);
+                        user.setUserExercises_Completed(currExercisesCompleted);
+
+                    }
+                    else{
+                        Log.d("MyApp", "DocumentSnapshot data: " + document.getData());
+                    }
+
+                    //Sending updated user statistics to firebase
+                    docRef.update("userExercises_Completed", user.getUserExercises_Completed());
+                    docRef.update("userWorkouts_Completed", user.getUserWorkouts_Completed());
+                }
+            }
+        });
 
         Toast.makeText(this, "Workout saved Successfully", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(WorkoutLog.this, Menu.class);
