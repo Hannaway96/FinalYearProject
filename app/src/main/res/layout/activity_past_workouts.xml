@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/PastWorkout_ListView"
+        android:id="@+id/PastWorkout_ExercisesListView"
         android:layout_width="match_parent"
         android:layout_height="519dp"
         android:layout_marginTop="8dp"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.25" />
 
     <Button
-        android:id="@+id/PastWorkout_ReturnBtn"
+        android:id="@+id/PastWorkouts_ReturnBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -45,6 +45,7 @@
         android:background="@drawable/rounder_edge"
         android:backgroundTint="@color/themeColourStart"
         android:fontFamily="sans-serif-condensed-light"
+        android:onClick="Return"
         android:text="@string/PastWorkout_Return_Btn"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/cardview_light_background"
@@ -54,6 +55,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PastWorkout_ListView" />
+        app:layout_constraintTop_toBottomOf="@+id/PastWorkout_ExercisesListView" />
 
 </android.support.constraint.ConstraintLayout>

@@ -14,17 +14,6 @@ Menu{
 	**Some design Tweaks**
 }
 
-WorkoutLog{
-	-Connect View past workouts to activity
-	-Call workout that exercise has been added too
-	-If they back out without saving then remove workout
-}
-
-AddExercise{
-	-Create Workout
-	-Add Exercise to that workout
-}
-
 
 
 

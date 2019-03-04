@@ -29,12 +29,21 @@
     <string name="AddExercise_type_txt">Type</string>
     <string name="AddExercise_exerciseName_txt">Exercise</string>
     <string name="AddExercise_SetsTxt"># of Sets</string>
-    <string name="AddExercise_RepsTxr"># of Reps</string>
+    <string name="AddExercise_RepsTxt"># of Reps</string>
     <string name="AddExercise_Add_Btn">Add</string>
     <string name="AddExercise_Cancel_Btn">Cancel</string>
 
     <string name="PastWorkouts_Title">Past Workouts</string>
     <string name="PastWorkout_Return_Btn">Return</string>
+
+    <string name="PastWorkout_Title">Past Workout</string>
+    <string name="PastWorkout_totalRepsLbl">Total Reps:</string>
+    <string name="PastWorkout_totalRepsValue">0</string>
+    <string name="PastWorkout_totalSetsLbl">Total Sets: </string>
+    <string name="PastWorkout_totalSetsVal">0</string>
+    <string name="PastWorkout_dateCompletedLbl">Date Completed</string>
+    <string name="PastWorkout_dateCompletedVal">1/1/2010</string>
+    <string name="PastWorkout_ReturnButton">Return</string>
 
     <string-array name="ExerciseTypes">
         <item>Abs</item>
@@ -44,7 +53,7 @@
         <item>Legs</item>
     </string-array>
 
-    <string-array name = "AbExercises">
+    <string-array name="AbExercises">
         <item>Bicycle Crunches</item>
         <item>Crossover Crunch</item>
         <item>Heel Touch</item>
@@ -91,7 +100,7 @@
         <item>Upright Row</item>
         <item>Wide Grip Seated Cable Row</item>
     </string-array>
-    
+
     <string-array name="ChestExercises">
         <item>Cable Chest Fly</item>
         <item>Decline Bench Press</item>

@@ -86,7 +86,6 @@ public class WorkoutLog extends AppCompatActivity {
         startActivity(intent);
 }
 
-
     public void SaveWorkout(View view){
 
         //Creating workout
@@ -169,6 +168,8 @@ public class WorkoutLog extends AppCompatActivity {
                         public void onClick(DialogInterface dialogInterface, int i) {
 
                             //TODO SAVE WORKOUT TO FIREBASE
+
+
                             Toast.makeText(WorkoutLog.this, "Workout Saved", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(WorkoutLog.this, Menu.class);
                             startActivity(intent);
