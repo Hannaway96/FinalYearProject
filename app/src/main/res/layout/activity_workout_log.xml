@@ -32,7 +32,9 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounder_edge"
         android:backgroundTint="@color/themeColourStart"
+        android:elevation="0dp"
         android:fontFamily="sans-serif-condensed-light"
+        android:onClick="GoToPastWorkouts"
         android:text="@string/WorkoutLog_View_Past_Workout"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -68,42 +70,25 @@
 
     <ListView
         android:id="@+id/WorkoutListView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="411dp"
+        android:layout_height="507dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/cardview_shadow_start_color"
         android:dividerHeight="2dp"
         android:scrollbars="vertical"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/workoutLog_backBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/WorkoutLog_addExerciseBtn"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/workoutLog_backBtn"
-        style="@android:style/Widget.ImageButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/colorbutton"
-        android:onClick="MenuReturn"
-        android:scaleType="fitEnd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/WorkoutListView"
-        app:srcCompat="@drawable/back_button" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/workout_Log_SaveWorkoutBtn"
         android:layout_width="126dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
@@ -119,8 +104,29 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
-        app:layout_constraintStart_toEndOf="@+id/workoutLog_backBtn"
+        app:layout_constraintTop_toBottomOf="@+id/WorkoutListView" />
+
+    <Button
+        android:id="@+id/WorkoutLog_ReturnBtn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounder_edge"
+        android:backgroundTint="@color/themeColourStart"
+        android:fontFamily="sans-serif-condensed-light"
+        android:onClick="MenuReturn"
+        android:text="@string/PastWorkout_Return_Btn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/workout_Log_SaveWorkoutBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/WorkoutListView" />
 
 </android.support.constraint.ConstraintLayout>

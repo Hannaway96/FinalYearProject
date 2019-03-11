@@ -36,7 +36,7 @@
     <string name="PastWorkouts_Title">Past Workouts</string>
     <string name="PastWorkout_Return_Btn">Return</string>
 
-    <string name="PastWorkout_Title">Past Workout</string>
+    <string name="PastWorkout_Title">Workout: </string>
     <string name="PastWorkout_totalRepsLbl">Total Reps:</string>
     <string name="PastWorkout_totalRepsValue">0</string>
     <string name="PastWorkout_totalSetsLbl">Total Sets: </string>

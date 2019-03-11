@@ -2,7 +2,6 @@ package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ExerciseListAdapter extends ArrayAdapter<Exercise> {
 
@@ -42,7 +40,7 @@ public class ExerciseListAdapter extends ArrayAdapter<Exercise> {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource, parent, false);
 
-        TextView tvExerciseName = (TextView)convertView.findViewById(R.id.exerciseNameTxtView);
+        TextView tvExerciseName = (TextView)convertView.findViewById(R.id.ExerciseNameTxtView);
         TextView tvReps = (TextView)convertView.findViewById(R.id.repsTxtView);
         TextView tvSets = (TextView)convertView.findViewById(R.id.setsTxtView);
         TextView tvType = (TextView)convertView.findViewById(R.id.typeTxtView);

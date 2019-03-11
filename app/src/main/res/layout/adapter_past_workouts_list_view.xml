@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="50">
+
+        <TextView
+            android:id="@+id/WorkoutDateTxtView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center"
+            android:text="TextView1"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="33.3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ExercisesCompleteTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center"
+            android:text="TextView2"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/TotalRepsTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/ExercisesCompleteTxtView"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center"
+            android:text="TextView3"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/TotalSetsTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/TotalRepsTxtView"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center"
+            android:text="TextView4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+</LinearLayout>
