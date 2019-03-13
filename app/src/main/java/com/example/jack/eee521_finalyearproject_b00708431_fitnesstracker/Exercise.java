@@ -6,8 +6,6 @@ import android.os.Parcelable;
 
 public class Exercise implements Parcelable {
 
-    //enum ExerciseType {Abs, Arms, Back, Chest, Legs}
-
     private String exerciseType;
     private String exerciseName;
     private int noOfReps;

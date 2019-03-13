@@ -67,7 +67,6 @@ public class PastWorkouts extends AppCompatActivity {
 
         //Get current users ID
         String userID = firebaseAuth.getCurrentUser().getUid();
-
         //Query all the workouts within Workouts that contain the current users ID
         Query queryWorkouts = db.collection("Workouts").whereEqualTo("userUID", userID);
 
@@ -83,7 +82,6 @@ public class PastWorkouts extends AppCompatActivity {
                         workout.setTotalExercises(Integer.parseInt(document.get("totalExercises").toString()));
                         workout.setTotalSets(Integer.parseInt(document.get("totalSets").toString()));
                         workout.setTotalReps(Integer.parseInt(document.get("totalReps").toString()));
-
                         workoutsList.add(workout);
                     }
 

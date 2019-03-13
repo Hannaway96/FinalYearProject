@@ -14,8 +14,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Menu extends AppCompatActivity {
 
-    CardView workoutLogCardView, workoutGenCardView, exitCardView;
-    ImageView workoutLogImg, workoutGenImg, exitImg;
+    CardView workoutLogCardView, workoutGenCardView, userStatsCardView, exitCardView;
+    ImageView workoutLogImg, workoutGenImg, userStatsImg, exitImg;
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -34,17 +34,19 @@ public class Menu extends AppCompatActivity {
         //Declaring resources used within the XML
         workoutLogCardView = (CardView)findViewById(R.id.Menu_WorkoutLog_card_view);
         workoutGenCardView = (CardView)findViewById(R.id.Menu_WorkoutGen_card_view);
+        userStatsCardView = (CardView)findViewById(R.id.Menu_UserStats_cardView);
         exitCardView = (CardView)findViewById(R.id.Menu_Exit_CardView);
         workoutLogImg = (ImageView)findViewById(R.id.Menu_WorkoutLog_imgview);
         workoutGenImg = (ImageView)findViewById(R.id.Menu_WorkoutGen_imgview);
+        userStatsImg = (ImageView)findViewById(R.id.Menu_UserStats_imgview);
         exitImg = (ImageView)findViewById(R.id.Menu_Exit_ImgView);
 
         //Have to manually set the image views to round their corners
         workoutLogImg.setClipToOutline(true);
         workoutGenImg.setClipToOutline(true);
+        userStatsImg.setClipToOutline(true);
         exitImg.setClipToOutline(true);
     }
-
 
 
     //This changes activities from the current activity to the workout log activity
@@ -57,6 +59,12 @@ public class Menu extends AppCompatActivity {
     //This changes activities from the current activity to the workout generator activity
     public void GoToWorkoutGen(View view){
         Intent intent = new Intent(Menu.this, WorkoutGenerator.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void GoToUserStats(View view){
+        Intent intent = new Intent(Menu.this, UserStats.class);
         startActivity(intent);
         finish();
     }

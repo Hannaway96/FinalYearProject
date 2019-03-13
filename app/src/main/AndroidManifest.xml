@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PastWorkout"></activity>
+        <activity android:name=".UserStats"></activity>
+        <activity android:name=".PastWorkout" />
         <activity android:name=".PastWorkouts" />
         <activity android:name=".WorkoutGenerator" />
         <activity android:name=".AddExercise" />

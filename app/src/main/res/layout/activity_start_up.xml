@@ -50,7 +50,7 @@
             tools:layout_editor_absoluteY="69dp" />
 
         <ImageView
-            android:id="@+id/StartUp_imgView"
+            android:id="@+id/PStats_ImgView"
             android:layout_width="350dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"

@@ -82,13 +82,14 @@
         android:id="@+id/PastWorkout_ExercisesListView"
         android:layout_width="411dp"
         android:layout_height="452dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PastWorkout_DateCompletedLblTxtView"
-        app:layout_constraintVertical_bias="0.20999998" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/PastWorkout_ReturnBtn"

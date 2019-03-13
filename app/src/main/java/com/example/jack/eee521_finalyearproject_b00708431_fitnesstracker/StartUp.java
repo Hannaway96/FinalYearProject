@@ -1,7 +1,6 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -55,7 +54,7 @@ public class StartUp extends AppCompatActivity {
         createProfileBtn = (Button)findViewById(R.id.Start_Up_Create_Profile_btn);
         usernameEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Username);
         passwordEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Password);
-        imageView = (ImageView)findViewById(R.id.StartUp_imgView);
+        imageView = (ImageView)findViewById(R.id.PStats_ImgView);
 
 
         imageView.setClipToOutline(true);

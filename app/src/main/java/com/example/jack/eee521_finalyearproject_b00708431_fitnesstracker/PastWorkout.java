@@ -1,39 +1,48 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.ArrayMap;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class PastWorkout extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private FirebaseAuth firebaseAuth;
-    String workoutID;
-    TextView totalRepsValueTxtView, totalSetsValueTxtView, dateCompletedTxtView;
-    ListView pastExerciseList;
-    Button returnBtn;
-    ArrayList<Exercise> pastExercises = new ArrayList<>();
+    private String workoutID;
+    private TextView totalRepsValueTxtView, totalSetsValueTxtView, dateCompletedTxtView;
+    private ListView pastExerciseList;
+    private Button returnBtn;
+    private Workout workout = new Workout();
+    private ArrayList<Exercise> pastExercises = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_past_workout);
-
 
         db = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
@@ -52,30 +61,46 @@ public class PastWorkout extends AppCompatActivity {
     public void populateActivity(final String workoutID){
 
         //Retrieve document relating to workoutChosen by user
-        final DocumentReference docRef = db.collection("Workouts").document(workoutID);
+        DocumentReference docRef = db.collection("Workouts").document(workoutID);
 
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>(){
+        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task){
-                if(task.isSuccessful()){
-                    DocumentSnapshot document = task.getResult();
-                    if(document.exists()){
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
 
-                        Workout workout = new Workout();
+                workout.setWorkoutUID(workoutID);
+                workout.setWorkoutDateStr(documentSnapshot.get("workoutDateStr").toString());
+                workout.setTotalExercises(Integer.parseInt(documentSnapshot.get("totalExercises").toString()));
+                workout.setTotalReps(Integer.parseInt(documentSnapshot.get("totalReps").toString()));
+                workout.setTotalSets(Integer.parseInt(documentSnapshot.get("totalSets").toString()));
 
-                        workout.setWorkoutUID(workoutID);
-                        workout.setWorkoutDateStr(document.get("workoutDateStr").toString());
-                        workout.setTotalExercises(Integer.parseInt(document.get("totalExercises").toString()));
-                        workout.setTotalReps(Integer.parseInt(document.get("totalReps").toString()));
-                        workout.setTotalSets(Integer.parseInt(document.get("totalSets").toString()));
+                //TODO FIGURE OUT HOW TO READ AN ARRAY OF MAPS FROM FIREBASE
 
-                         //TODO FIGURE OUT HOW TO READ IN EXERCISES FROM OBJEXT ARRAY ON FIREBASE
 
-                        totalRepsValueTxtView.setText(workout.getTotalReps());
-                        totalSetsValueTxtView.setText(workout.getTotalSets());
-                        dateCompletedTxtView.setText(workout.getWorkoutDateStr());
-                    }
+                Map<String, Object> map = documentSnapshot.getData();   //Get Workout Document
+                ArrayList mapExerciseList = (ArrayList)map.get("exercises");    //Get exercises maps and put them into an array list
+
+                for(int i = 0; i < mapExerciseList.size(); i++) {
+
+                    Map<String, Object> exerciseMap = (Map<String, Object>) mapExerciseList.get(i); //Loop through each exercise in the map
+
+
+                    Exercise tempExercise = new Exercise();             //create temp  exercise class
+                    tempExercise.setExerciseName(exerciseMap.get("exerciseName").toString());
+                    tempExercise.setExerciseType(exerciseMap.get("exerciseType").toString());
+                    tempExercise.setNoOfReps(Integer.parseInt(exerciseMap.get("noOfReps").toString()));
+                    tempExercise.setNoOfSets(Integer.parseInt(exerciseMap.get("noOfSets").toString()));
+
+                    pastExercises.add(tempExercise);
                 }
+
+
+                totalRepsValueTxtView.setText(String.valueOf(workout.getTotalReps()));
+                totalSetsValueTxtView.setText(String.valueOf(workout.getTotalSets()));
+                dateCompletedTxtView.setText(workout.getWorkoutDateStr());
+
+                ExerciseListAdapter exerciseListAdapter = new ExerciseListAdapter(PastWorkout.this, R.layout.adapter_view_layout, pastExercises);
+                pastExerciseList.setAdapter(exerciseListAdapter);
+                exerciseListAdapter.notifyDataSetChanged();
             }
         });
     }
