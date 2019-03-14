@@ -20,22 +20,42 @@
     <string name="menu_workouts">Workouts</string>
     <string name="menu_UserStats">Personal Statistics</string>
     <string name="menu_exit">Exit</string>
-    
+
     <string name="PStats_Title">Personal Statistics</string>
     <string name="PStats_Users_NameLbl">Name:</string>
-    <string name="PStats_Users_NameVal">John Doe</string>
+    <string name="PStats_Users_NameVal">null</string>
     <string name="PStats_Users_DOBLbl">Birth:</string>
-    <string name="PStats_Users_DOBVal">01/01/1970</string>
+    <string name="PStats_Users_DOBVal">null</string>
     <string name="PStats_Users_GenderLbl">Gender:</string>
-    <string name="PStats_Users_GenderVal">...</string>
+    <string name="PStats_Users_GenderVal">null</string>
     <string name="PStats_Users_HeightLbl">Height:</string>
-    <string name="PStats_Users_HeightVal">160 cm</string>
+    <string name="PStats_Users_HeightVal">000</string>
     <string name="PStats_Users_WeightLbl">Weight:</string>
-    <string name="PStats_Users_WeightVal">70 Kg</string>
+    <string name="PStats_Users_WeightVal">0.00</string>
+    <string name="cm">cm</string>
+    <string name="kg">Kg</string>
     <string name="PStats_Users_WorkoutsCompLbl">Workouts Completed:</string>
     <string name="PStats_Users_WorkoutsCompVal">0</string>
     <string name="PStats_Users_ExercisesCompLbl">Exercises Completed:</string>
     <string name="PStats_Users_ExercisesCompVal">0</string>
+    <string name="PStats_Users_BMILbl">BMI: </string>
+    <string name="PStats_Users_BMIVal">...</string>
+    <string name="PStats_Users_HealthStatusLbl">Health Status: </string>
+    <string name="PStats_Users_HealthStatusVal">Healthy</string>
+    <string name="PStats_BMI_Info">About BMI ?</string>
+
+    <string name="BMIInfo_Title">BMI</string>
+    <string name="BMIInfo_WhatIs">What is BMI?</string>
+    <string name="BMIInfo_WhatIsInfo">Body Mass Index (BMI) is a measure of body fat based on height and weight.</string>
+    <string name="BMIInfo_HowIsCal">How is it Calculated?</string>
+    <string name="BMIInfo_HowIsCalInfo"> Body Mass Index is a simple calculation using a person’s height and weight. The formula is BMI = kg/m2 where kg is a person’s weight in kilograms and m2 is their height in metres squared.
+                                            A BMI of 25.0 or more is overweight, while the healthy range is 18.5 to 24.9. BMI applies to most adults 18-65 years.</string>
+    <string name="BMIInfo_Important">Important to consider the following...</string>
+    <string name="BMIInfo_ImportantInfo">BMI is not used for muscle builders, long distance athletes, pregnant women, the elderly or young children.
+                                            This is because BMI does not take into account whether the weight is carried as muscle or fat, just the number. Those with a higher muscle mass, such as athletes, may have a high BMI but not be at greater health risk.
+                                            Those with a lower muscle mass, such as children who have not completed their growth or the elderly who may be losing some muscle mass may have a lower BMI.
+                                            During pregnancy and lactation, a woman\'s body composition changes, so using BMI is not appropriate.</string>
+
 
     <string name="WorkoutLog_add_Exercise_btn">Add Exercise</string>
     <string name="WorkoutLog_View_Past_Workout">View Past Workouts</string>

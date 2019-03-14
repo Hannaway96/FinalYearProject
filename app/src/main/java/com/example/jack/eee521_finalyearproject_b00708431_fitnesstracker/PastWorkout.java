@@ -73,9 +73,6 @@ public class PastWorkout extends AppCompatActivity {
                 workout.setTotalReps(Integer.parseInt(documentSnapshot.get("totalReps").toString()));
                 workout.setTotalSets(Integer.parseInt(documentSnapshot.get("totalSets").toString()));
 
-                //TODO FIGURE OUT HOW TO READ AN ARRAY OF MAPS FROM FIREBASE
-
-
                 Map<String, Object> map = documentSnapshot.getData();   //Get Workout Document
                 ArrayList mapExerciseList = (ArrayList)map.get("exercises");    //Get exercises maps and put them into an array list
 
@@ -83,21 +80,22 @@ public class PastWorkout extends AppCompatActivity {
 
                     Map<String, Object> exerciseMap = (Map<String, Object>) mapExerciseList.get(i); //Loop through each exercise in the map
 
-
                     Exercise tempExercise = new Exercise();             //create temp  exercise class
                     tempExercise.setExerciseName(exerciseMap.get("exerciseName").toString());
                     tempExercise.setExerciseType(exerciseMap.get("exerciseType").toString());
                     tempExercise.setNoOfReps(Integer.parseInt(exerciseMap.get("noOfReps").toString()));
                     tempExercise.setNoOfSets(Integer.parseInt(exerciseMap.get("noOfSets").toString()));
 
-                    pastExercises.add(tempExercise);
+                    pastExercises.add(tempExercise);    //add exercise class to the pastExercises list
                 }
 
 
+                //Set values of the past workout onto the activity
                 totalRepsValueTxtView.setText(String.valueOf(workout.getTotalReps()));
                 totalSetsValueTxtView.setText(String.valueOf(workout.getTotalSets()));
                 dateCompletedTxtView.setText(workout.getWorkoutDateStr());
 
+                //Set exercise list adapter
                 ExerciseListAdapter exerciseListAdapter = new ExerciseListAdapter(PastWorkout.this, R.layout.adapter_view_layout, pastExercises);
                 pastExerciseList.setAdapter(exerciseListAdapter);
                 exerciseListAdapter.notifyDataSetChanged();

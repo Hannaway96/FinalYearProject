@@ -18,7 +18,9 @@ public class UserStats extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseFirestore db;
     User user = new User();
-    TextView nameTxtView, dobTxtView, heightTxtView, weightTxtView, genderTxtView, exercisesCompTxtView, workoutsCompTxtView;
+    TextView nameTxtView, dobTxtView, heightTxtView, weightTxtView, genderTxtView,
+                exercisesCompTxtView, workoutsCompTxtView, userBMITxtView, userHealthStatusTxtView;
+
     ImageView imgView;
 
     @Override
@@ -30,6 +32,7 @@ public class UserStats extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         imgView = (ImageView)findViewById(R.id.PStats_ImgView);
+        imgView.setClipToOutline(true);
 
         nameTxtView = (TextView)findViewById(R.id.PStats_UserName_Val_TxtView);
         dobTxtView = (TextView)findViewById(R.id.PStats_DOBVal_TxtView);
@@ -38,11 +41,12 @@ public class UserStats extends AppCompatActivity {
         genderTxtView = (TextView)findViewById(R.id.PStats_GenderVal_TxtView);
         exercisesCompTxtView = (TextView)findViewById(R.id.PStats_ExercisesCompVal_TxtView);
         workoutsCompTxtView = (TextView)findViewById(R.id.PStats_WorkoutsCompVal_TxtView);
+        userBMITxtView = (TextView)findViewById(R.id.PStats_UsersBMIVal_TxtView);
+        userHealthStatusTxtView = (TextView)findViewById(R.id.PStats_HealthStatusVal_TxtView);
+
 
         String userUID = firebaseAuth.getCurrentUser().getUid();
         FillDetails(userUID);
-
-        imgView.setClipToOutline(true);
     }
 
     public void FillDetails(String UserID){
@@ -63,13 +67,45 @@ public class UserStats extends AppCompatActivity {
 
                 nameTxtView.setText(user.getUserName()+"");
                 dobTxtView.setText(user.getUserDOB()+"");
-                heightTxtView.setText(String.valueOf(user.getUserHeight()) + " cm");
-                weightTxtView.setText(String.valueOf(user.getUserWeight()) + " Kg");
+                heightTxtView.setText(String.valueOf(user.getUserHeight()));
+                weightTxtView.setText(String.valueOf(user.getUserWeight()));
                 genderTxtView.setText(user.getUserGender()+"");
                 exercisesCompTxtView.setText(String.valueOf(user.getUserExercises_Completed())+"");
                 workoutsCompTxtView.setText(String.valueOf(user.getUserWorkouts_Completed())+"");
+
+                CalBMI();
             }
         });
+    }
+
+    public void CalBMI(){
+
+        //TODO Maybe set the health status text colour dependant on the health status
+
+        double weight = user.getUserWeight();
+        double height = user.getUserHeight();
+        height = height / 100;
+        double userBMI = weight / (height * height);
+        String bmiStr = String.format("%.2f", userBMI);
+
+        if(userBMI <= 18.5){
+            userBMITxtView.setText(bmiStr);
+            userHealthStatusTxtView.setText("Under Weight");
+        }
+        else if(userBMI > 18.5  && userBMI <= 24.9){
+            userBMITxtView.setText(bmiStr);
+            userHealthStatusTxtView.setText("Healthy Weight");
+        }
+        else{
+            userBMITxtView.setText(bmiStr);
+            userHealthStatusTxtView.setText("Over Weight");
+        }
+    }
+
+    public void GoToBMIInfo(View view){
+        Intent intent = new Intent(UserStats.this, BMIInfo.class);
+        startActivity(intent);
+        finish();
     }
 
     public void Return(View view){
