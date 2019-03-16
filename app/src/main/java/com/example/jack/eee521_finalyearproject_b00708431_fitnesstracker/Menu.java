@@ -1,7 +1,5 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,8 +21,7 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        firebaseAuth = FirebaseAuth.getInstance();                      //BE WARY OF THIS
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        firebaseAuth.getInstance();
 
         //Checks if the user has requested that the program should exit
         if(getIntent().getBooleanExtra("EXIT", false)){
@@ -33,11 +30,11 @@ public class Menu extends AppCompatActivity {
 
         //Declaring resources used within the XML
         workoutLogCardView = (CardView)findViewById(R.id.Menu_WorkoutLog_card_view);
-        workoutGenCardView = (CardView)findViewById(R.id.Menu_WorkoutGen_card_view);
+        workoutGenCardView = (CardView)findViewById(R.id.Menu_WorkoutPlans_card_view);
         userStatsCardView = (CardView)findViewById(R.id.Menu_UserStats_cardView);
         exitCardView = (CardView)findViewById(R.id.Menu_Exit_CardView);
         workoutLogImg = (ImageView)findViewById(R.id.Menu_WorkoutLog_imgview);
-        workoutGenImg = (ImageView)findViewById(R.id.Menu_WorkoutGen_imgview);
+        workoutGenImg = (ImageView)findViewById(R.id.Menu_WorkoutPlans_imgview);
         userStatsImg = (ImageView)findViewById(R.id.Menu_UserStats_imgview);
         exitImg = (ImageView)findViewById(R.id.Menu_Exit_ImgView);
 
@@ -57,8 +54,8 @@ public class Menu extends AppCompatActivity {
     }
 
     //This changes activities from the current activity to the workout generator activity
-    public void GoToWorkoutGen(View view){
-        Intent intent = new Intent(Menu.this, WorkoutGenerator.class);
+    public void GoToWorkoutPlans(View view){
+        Intent intent = new Intent(Menu.this, WorkoutPlans.class);
         startActivity(intent);
         finish();
     }
@@ -71,7 +68,6 @@ public class Menu extends AppCompatActivity {
 
     //Ths changes activities but runs the current activity again this time with an exit flag requesting the activity/app closes
     public void Exit(View view){
-        firebaseAuth.signOut();
         Intent intent = new Intent(Menu.this, Menu.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         intent.putExtra("EXIT", true);

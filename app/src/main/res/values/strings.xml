@@ -17,7 +17,7 @@
 
     <string name="menu_Title">Pick a feature</string>
     <string name="menu_workout_Log">Workout Log</string>
-    <string name="menu_workouts">Workouts</string>
+    <string name="menu_workouts">Workout Routines</string>
     <string name="menu_UserStats">Personal Statistics</string>
     <string name="menu_exit">Exit</string>
 
@@ -81,6 +81,14 @@
     <string name="PastWorkout_dateCompletedLbl">Date Completed</string>
     <string name="PastWorkout_dateCompletedVal">1/1/2010</string>
     <string name="PastWorkout_ReturnButton">Return</string>
+
+    <string name="WorkoutPlans_Title">Workout Plans</string>
+    <string name="WorkoutPlans_Chest_Title">Chest Workout</string>
+    <string name="WorkoutPlans_Back_Title">Back Workout</string>
+    <string name="WorkoutPlans_Abs_Title">Abs Workout</string>
+    <string name="WorkoutPlans_Arms_Title">Arms Workout</string>
+    <string name="WorkoutPlans_Legs_Title">Legs Workout</string>
+    <string name="WorkoutPlans_Return">Return</string>
 
     <string-array name="ExerciseTypes">
         <item>Abs</item>
@@ -169,6 +177,4 @@
         <item>Standing Calf Raise</item>
         <item>Squat(Back/Front/Sumo)</item>
     </string-array>
-    <string name="title_activity_user_stats">UserStats</string>
-
 </resources>

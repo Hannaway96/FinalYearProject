@@ -1,6 +1,7 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -80,8 +81,6 @@ public class UserStats extends AppCompatActivity {
 
     public void CalBMI(){
 
-        //TODO Maybe set the health status text colour dependant on the health status
-
         double weight = user.getUserWeight();
         double height = user.getUserHeight();
         height = height / 100;
@@ -89,14 +88,17 @@ public class UserStats extends AppCompatActivity {
         String bmiStr = String.format("%.2f", userBMI);
 
         if(userBMI <= 18.5){
+            userBMITxtView.setTextColor(Color.parseColor("#FF0000"));
             userBMITxtView.setText(bmiStr);
             userHealthStatusTxtView.setText("Under Weight");
         }
         else if(userBMI > 18.5  && userBMI <= 24.9){
+            userBMITxtView.setTextColor(Color.parseColor("#008000"));
             userBMITxtView.setText(bmiStr);
             userHealthStatusTxtView.setText("Healthy Weight");
         }
         else{
+            userBMITxtView.setTextColor(Color.parseColor("#FF0000"));
             userBMITxtView.setText(bmiStr);
             userHealthStatusTxtView.setText("Over Weight");
         }

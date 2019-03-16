@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkoutPlans">
+
+    <TextView
+        android:id="@+id/WorkoutPlans_Title_TxtView"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/WorkoutPlans_Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/titleColors"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/WorkoutPlans_Menu_Scroll_View"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <ScrollView
+        android:id="@+id/WorkoutPlans_Menu_Scroll_View"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="9dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WorkoutPlans_Title_TxtView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!-- A CardView that contains a TextView -->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/WorkoutPlans_Chest_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:clickable="true"
+
+            app:cardBackgroundColor="@color/cardView_color"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WorkoutPlans_Title_TxtView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_outline"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/Workout_Plan_Chest_Title_TxtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:paddingLeft="10dp"
+                    android:text="@string/WorkoutPlans_Chest_Title"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/WorkoutPlans_Chest_imgView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/round_outline"
+                    android:contentDescription="Logging Workout"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/workout_plan_chest" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/WorkoutPlans_Back_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:clickable="true"
+
+            app:cardBackgroundColor="@color/cardView_color"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WorkoutPlans_Chest_card_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_outline"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/Workout_Plan_Back_Title_TxtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:paddingLeft="10dp"
+                    android:text="@string/WorkoutPlans_Back_Title"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/WorkoutPlans_Back_imgView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/round_outline"
+                    android:contentDescription="Logging Workout"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/workout_plan_back" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/WorkoutPlans_Legs_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:clickable="true"
+
+            app:cardBackgroundColor="@color/cardView_color"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WorkoutPlans_Back_card_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_outline"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/Workout_Plan_Legs_Title_TxtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:paddingLeft="10dp"
+                    android:text="@string/WorkoutPlans_Legs_Title"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/WorkoutPlans_Legs_imgView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/round_outline"
+                    android:contentDescription="Logging Workout"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/workout_plan_legs" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/WorkoutPlans_Abs_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:clickable="true"
+
+            app:cardBackgroundColor="@color/cardView_color"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WorkoutPlans_Legs_card_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_outline"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/Workout_Plan_Abs_Title_TxtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:paddingLeft="10dp"
+                    android:text="@string/WorkoutPlans_Abs_Title"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/WorkoutPlans_Abs_imgView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/round_outline"
+                    android:contentDescription="AbWorkout"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/workout_plan_abs" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/WorkoutPlans_Arms_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:clickable="true"
+
+            app:cardBackgroundColor="@color/cardView_color"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WorkoutPlans_Abs_card_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_outline"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/Workout_Plan_Arms_Title_TxtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:paddingLeft="10dp"
+                    android:text="@string/WorkoutPlans_Arms_Title"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/WorkoutPlans_Arms_imgView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="false"
+                    android:background="@drawable/round_outline"
+                    android:contentDescription="AbWorkout"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/workout_plan_arms" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!-- A CardView that contains a TextView -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/WorkoutPlans_Exit_CardView"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_marginTop="28dp"
+            android:clickable="true"
+            android:onClick="Return"
+            app:cardBackgroundColor="@color/cardView_color"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/WorkoutPlans_Arms_card_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/WorkoutPlans_return_txtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:paddingLeft="10dp"
+                    android:text="@string/WorkoutPlans_Return"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/Menu_Exit_ImgView"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="Return"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/exit_menu_image" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

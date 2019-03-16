@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000000</color>
+
+    <color name="background_color">#333333</color>
+
+
+    <color name="colorPrimary">#C0C0C0</color>
+    <color name="titleColors">#0064D4</color>
     <color name="colorPrimaryDark">#000000</color>
+    <color name="cardView_color">#C0C0C0</color>
+
     <color name="colorAccent">#FFFFFF</color>
     <color name="colorbutton">#EEEEEE</color>
     <color name="themeColourStart">#0064D4</color>
