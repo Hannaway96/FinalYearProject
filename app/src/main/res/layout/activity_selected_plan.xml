@@ -6,4 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".SelectedPlan">
 
+    <TextView
+        android:id="@+id/SelectedPlan_Title_TxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/SelectedPlan_Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/titleColors"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/SelectedPlan_ListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/SelectedPlan_ReturnBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SelectedPlan_Title_TxtView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/SelectedPlan_ReturnBtn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounder_edge"
+        android:backgroundTint="@color/themeColourStart"
+        android:fontFamily="sans-serif-condensed-light"
+        android:onClick="Return"
+        android:text="@string/PastWorkout_Return_Btn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/SelectedPlan_SaveBtn"
+        android:layout_width="126dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounder_edge"
+        android:backgroundTint="@color/themeColourStart"
+        android:fontFamily="sans-serif-condensed-light"
+        android:onClick="SaveWorkout"
+        android:text="@string/WorkoutLog_Save_Workout_Btn"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/SelectedPlan_ReturnBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/WorkoutLog_ReturnBtn" />
+
 </android.support.constraint.ConstraintLayout>

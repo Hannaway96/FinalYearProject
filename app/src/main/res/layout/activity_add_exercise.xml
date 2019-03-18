@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
     tools:context=".AddExercise">
 
     <TextView
         android:id="@+id/addExercise_AddExerciseTitleTxtView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="@string/AddExercise_Title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/titleColors"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,13 +26,17 @@
 
     <TextView
         android:id="@+id/addExercise_Type_txtView"
-        android:layout_width="40dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/AddExercise_type_txt"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/titleColors"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_AddExerciseTitleTxtView" />
 
@@ -49,12 +53,13 @@
 
     <TextView
         android:id="@+id/addExercise_ExerciseTxt"
-        android:layout_width="68dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/AddExercise_exerciseName_txt"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/titleColors"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/addExercise_Type_Spinner"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_Type_Spinner" />
@@ -72,12 +77,13 @@
 
     <TextView
         android:id="@+id/addExercise_RepTxt"
-        android:layout_width="77dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/AddExercise_RepsTxt"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/titleColors"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/addExercise_Exercise_Spinner"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_Exercise_Spinner" />
@@ -90,17 +96,19 @@
         android:ems="10"
         android:hint="8,10,12, etc..."
         android:inputType="number"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="@+id/addExercise_RepTxt"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_RepTxt" />
 
     <TextView
         android:id="@+id/addExercise_SetsTxt"
-        android:layout_width="73dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/AddExercise_SetsTxt"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/titleColors"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/addExercise_Rep_PlainText"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_Rep_PlainText" />
@@ -114,6 +122,7 @@
         android:ems="10"
         android:hint="1,2,3 etc..."
         android:inputType="number"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/addExercise_ExerciseImgView"
         app:layout_constraintStart_toStartOf="@+id/addExercise_SetsTxt"
         app:layout_constraintTop_toBottomOf="@+id/addExercise_SetsTxt"
@@ -123,18 +132,18 @@
         android:id="@+id/addExercise_ExerciseImgView"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginBottom="188dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/addExercise_Sets_PlainTxt"
         tools:srcCompat="@tools:sample/avatars[0]" />
 
     <Button
         android:id="@+id/addBtn_Btn"
-        android:layout_width="88dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="120dp"
         android:background="@drawable/rounder_edge"
         android:backgroundTint="@color/themeColourStart"
@@ -146,14 +155,14 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/addExercise_ExerciseImgView" />
+        app:layout_constraintStart_toStartOf="@+id/addExercise_Sets_PlainTxt"
+        app:layout_constraintTop_toBottomOf="@+id/addExercise_ExerciseImgView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/addExercise_CancelBtn"
-        android:layout_width="88dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="104dp"
         android:layout_marginBottom="120dp"
         android:background="@drawable/rounder_edge"
         android:backgroundTint="@color/themeColourStart"
@@ -165,8 +174,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toEndOf="@+id/addBtn_Btn" />
+        app:layout_constraintEnd_toEndOf="@+id/addExercise_Sets_PlainTxt"
+        app:layout_constraintTop_toTopOf="@+id/addBtn_Btn"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

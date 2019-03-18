@@ -22,6 +22,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PastWorkouts extends AppCompatActivity {
 
@@ -47,7 +48,7 @@ public class PastWorkouts extends AppCompatActivity {
         //Populate workout list with past workouts the user performed
         GetPastWorkouts();
 
-        pastWorkoutsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       pastWorkoutsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -84,6 +85,9 @@ public class PastWorkouts extends AppCompatActivity {
                         workout.setTotalReps(Integer.parseInt(document.get("totalReps").toString()));
                         workoutsList.add(workout);
                     }
+
+                    //TODO SORT PAST WORKOUTS BY DATE
+                    //Collections.sort(workoutsList);
 
                     PastWorkoutsListAdapter workoutsListAdapter = new PastWorkoutsListAdapter(PastWorkouts.this, R.layout.adapter_past_workouts_list_view, workoutsList);
                     pastWorkoutsListView.setAdapter(workoutsListAdapter);

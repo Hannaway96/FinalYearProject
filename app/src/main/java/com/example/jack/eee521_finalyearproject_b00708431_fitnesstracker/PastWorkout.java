@@ -55,7 +55,7 @@ public class PastWorkout extends AppCompatActivity {
         returnBtn = (Button)findViewById(R.id.PastWorkout_ReturnBtn);
 
         populateActivity(workoutID);
-    }
+}
 
 
     public void populateActivity(final String workoutID){

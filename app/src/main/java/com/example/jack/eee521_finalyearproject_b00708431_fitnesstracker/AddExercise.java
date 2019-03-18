@@ -1,6 +1,7 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 
@@ -46,6 +48,7 @@ public class AddExercise extends AppCompatActivity{
         typeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ((TextView) parent.getChildAt(0)).setTextColor(Color.rgb(192, 192, 192));
                 exerciseType = typeSpinner.getSelectedItem().toString();
                 GetExercises(exerciseType);
             }
@@ -58,7 +61,7 @@ public class AddExercise extends AppCompatActivity{
         exerciseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                ((TextView) parent.getChildAt(0)).setTextColor(Color.rgb(192, 192, 192));
             }
 
             @Override

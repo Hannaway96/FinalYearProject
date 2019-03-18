@@ -90,6 +90,11 @@
     <string name="WorkoutPlans_Legs_Title">Legs Workout</string>
     <string name="WorkoutPlans_Return">Return</string>
 
+
+    <string name="SelectedPlan_Title">Selected Plan</string>
+
+    <!-- Resource Arrays-->
+
     <string-array name="ExerciseTypes">
         <item>Abs</item>
         <item>Arms</item>

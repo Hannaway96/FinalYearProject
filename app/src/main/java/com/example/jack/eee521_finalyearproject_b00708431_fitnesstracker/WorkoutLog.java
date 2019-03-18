@@ -1,10 +1,13 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -72,7 +75,7 @@ public class WorkoutLog extends AppCompatActivity {
                 for(int position : reverseSortedPositions){
                     exerciseList.remove(position);
                     adapter.notifyDataSetChanged();
-                    Toast.makeText(WorkoutLog.this, "Exercise deleted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WorkoutLog.this, "Exercise removed", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -89,7 +92,7 @@ public class WorkoutLog extends AppCompatActivity {
         startActivity(intent);
 }
 
-    public void SaveWorkout(View view){
+    public void SaveWorkout(){
 
         if(exerciseList.size() == 0){
             Toast.makeText(WorkoutLog.this, "No exercises entered!", Toast.LENGTH_SHORT).show();
@@ -182,32 +185,29 @@ public class WorkoutLog extends AppCompatActivity {
 
         //Make sure the user has saved their progress otherwise
         if(exerciseList.size() > 0) {
-            AlertDialog.Builder adb = new AlertDialog.Builder(this);
-            adb.setTitle("Workout not saved")
-                    .setMessage("You have not saved your current Workout session, do you wish to save it?")
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
+            AlertDialog.Builder adb = new AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert);
+            adb.setTitle("Workout not saved");
+            adb.setMessage("You have not saved your current Workout session, do you wish to save it?");
+            adb.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    SaveWorkout();
+                    Toast.makeText(WorkoutLog.this, "Workout Saved", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(WorkoutLog.this, Menu.class);
+                    startActivity(intent);
+                }
+            });
 
-                            //TODO SAVE WORKOUT TO FIREBASE
-
-                            Toast.makeText(WorkoutLog.this, "Workout Saved", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(WorkoutLog.this, Menu.class);
-                            startActivity(intent);
-
-                        }
-                    })
-
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(WorkoutLog.this, "Workout Discarded", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(WorkoutLog.this, Menu.class);
-                            startActivity(intent);
-                        }
-                    });
+            adb.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(WorkoutLog.this, "Workout Discarded", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(WorkoutLog.this, Menu.class);
+                    startActivity(intent); }
+            });
 
             adb.show();
+
         }
         else {
             Intent intent = new Intent(WorkoutLog.this, Menu.class);
