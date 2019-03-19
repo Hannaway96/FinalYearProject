@@ -31,25 +31,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="33.3"
+        android:layout_weight="50"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/ExercisesCompleteTxtView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
             android:fontFamily="sans-serif-condensed-light"
             android:gravity="center"
             android:text="TextView2"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp"
             android:textStyle="italic" />
 
         <TextView
             android:id="@+id/TotalRepsTxtView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_below="@id/ExercisesCompleteTxtView"
             android:fontFamily="sans-serif-condensed-light"
@@ -57,20 +57,20 @@
             android:text="TextView3"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp"
             android:textStyle="italic" />
 
         <TextView
             android:id="@+id/TotalSetsTxtView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_below="@id/TotalRepsTxtView"
             android:fontFamily="sans-serif-condensed-light"
             android:gravity="center"
             android:text="TextView4"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp"
             android:textStyle="italic" />
 

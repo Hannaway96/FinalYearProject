@@ -36,7 +36,7 @@
             android:text="TextView2"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="10sp"
             android:textStyle="italic" />
     </LinearLayout>
@@ -57,7 +57,7 @@
             android:text="TextView3"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp"
             android:textStyle="italic" />
 
@@ -71,7 +71,7 @@
             android:text="TextView4"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp"
             android:textStyle="italic" />
 

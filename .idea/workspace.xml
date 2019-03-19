@@ -18,25 +18,25 @@
     <list default="true" id="ff61ee57-c479-4a10-b7b0-7b7bebd51946" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/AddExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/AddExercise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkouts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SelectedPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SelectedPlan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutPlans.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutPlans.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_exercise.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_exercise.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_past_workout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_past_workout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_past_workouts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_past_workouts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_selected_plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_selected_plan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_workout_plans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_workout_plans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_workout_log.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_workout_log.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/adapter_past_workouts_list_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/adapter_past_workouts_list_view.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +55,7 @@
     <session id="1746161620">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -64,18 +64,19 @@
           <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="34" />
           <entry key="gradle" value="18" />
-          <entry key="java" value="150" />
+          <entry key="java" value="166" />
           <entry key="jpg" value="4" />
           <entry key="json" value="3" />
           <entry key="txt" value="2" />
-          <entry key="xml" value="163" />
+          <entry key="xml" value="174" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -83,27 +84,27 @@
           <entry key="CLASS" value="34" />
           <entry key="Groovy" value="18" />
           <entry key="Image" value="4" />
-          <entry key="JAVA" value="150" />
+          <entry key="JAVA" value="166" />
           <entry key="JSON" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="XML" value="163" />
+          <entry key="XML" value="174" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="31" />
           <entry key="gradle" value="532" />
-          <entry key="java" value="22519" />
+          <entry key="java" value="24233" />
           <entry key="txt" value="1442" />
-          <entry key="xml" value="3621" />
+          <entry key="xml" value="3681" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="532" />
-          <entry key="JAVA" value="22519" />
+          <entry key="JAVA" value="24233" />
           <entry key="PLAIN_TEXT" value="1473" />
-          <entry key="XML" value="3621" />
+          <entry key="XML" value="3681" />
         </counts>
       </usages-collector>
     </session>
@@ -153,77 +154,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutPlans.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
-              <folding>
-                <element signature="method#GoToSelectedPlan#0;class#WorkoutPlans#0" />
-                <element signature="method#Return#0;class#WorkoutPlans#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkouts.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
-              <folding>
-                <element signature="e#1833#2464#0" expanded="true" />
-                <element signature="e#2463#2464#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/CreateProfile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="107" column="29" lean-forward="true" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_workout_log.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="76" column="37" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SelectedPlan.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_past_workouts_list_view.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-              <folding>
-                <element signature="e#4827#4848#0" />
-                <element signature="method#Return#0;class#SelectedPlan#0" />
-              </folding>
+            <state relative-caret-position="459">
+              <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_selected_plan.xml">
-          <provider editor-type-id="text-editor" />
           <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutLog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-              <folding>
-                <element signature="method#AddExercise#0;class#WorkoutLog#0" />
-                <element signature="method#GoToPastWorkouts#0;class#WorkoutLog#0" />
-              </folding>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_past_workout.xml">
-          <provider editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_past_workouts.xml">
           <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -232,10 +210,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="valueResourceFile" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mobileView</find>
+      <find>exerci</find>
+      <find>exercise</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -243,13 +229,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/User.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/my_button.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/round_outline.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/rounder_edge.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/StartUp.java" />
-        <option value="$PROJECT_DIR$/TODO.txt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SwipeDismissListViewTouchListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/ExerciseListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkoutsListAdapter.java" />
@@ -267,26 +246,40 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_user_stats.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/adapter_past_workouts_list_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_profile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_bmiinfo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_start_up.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_workout_log.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_past_workouts.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_workout_plans.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutPlans.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkout.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/AddExercise.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_exercise.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_selected_plan.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/CreateProfile.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutLog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutPlans.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkouts.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/DragSortListView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SimpleFloatViewManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortCursorAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortItemView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortItemViewCheckable.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortListPreferences.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/ResourceDragSortCursorAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SimpleDragSortCursorAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortListPreference.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dslv_attrs.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/sort_list_array_dialog_preference.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortListView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragAndDropListView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SelectedPlan.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_past_workout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkouts.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/CreateProfile.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_workout_log.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/adapter_past_workouts_list_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_past_workouts.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_selected_plan.xml" />
       </list>
     </option>
   </component>
@@ -314,6 +307,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FinalYearProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalYearProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -347,19 +352,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FinalYearProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalYearProject" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,7 +363,10 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wank\Desktop\FinalYearProjectApp\FinalYearProject\app" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker" />
     </key>
     <key name="android.template.packageName">
@@ -379,8 +375,8 @@
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Wank\Desktop\FinalYearProjectApp\FinalYearProject\app" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -547,7 +543,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" sideWeight="0.50384617" side_tool="true" weight="0.16151386" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49615383" visible="true" weight="0.15138593" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49615383" visible="true" weight="0.15138593" />
       <window_info id="Structure" order="2" sideWeight="0.50384617" side_tool="true" weight="0.16151386" />
       <window_info id="Favorites" order="3" sideWeight="0.50384617" side_tool="true" weight="0.16151386" />
       <window_info id="Image Layers" order="4" />
@@ -555,15 +551,15 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Build Variants" order="7" sideWeight="0.50384617" side_tool="true" weight="0.16151386" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.114967465" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.36984816" />
-      <window_info active="true" anchor="bottom" id="TODO" order="2" visible="true" weight="0.20824295" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.29175705" />
+      <window_info anchor="bottom" id="Logcat" order="1" weight="0.029284164" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.20824295" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.4197397" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5010661" side_tool="true" weight="0.23969631" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.329718" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4989339" weight="0.15509762" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4989339" weight="0.6203905" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.329718" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.17895879" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.0889371" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -581,16 +577,16 @@
       <window_info id="Designer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Build Variants" order="7" sideWeight="0.50384617" side_tool="true" weight="0.16151386" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.09652928" />
-      <window_info anchor="bottom" id="Logcat" order="1" weight="0.36984816" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.114967465" />
+      <window_info anchor="bottom" id="Logcat" order="1" visible="true" weight="0.029284164" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.20824295" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.4197397" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5010661" side_tool="true" weight="0.23969631" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.329718" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4989339" visible="true" weight="0.159436" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" weight="0.329718" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.17895879" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4989339" weight="0.6203905" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.0889371" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -621,87 +617,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-firestore-17.0.1.aar/1a2106445c2fe4f94a33f27eeee424f8/jars/classes.jar!/com/google/firebase/firestore/DocumentSnapshot.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkoutsListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/ExampleInstrumentedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/ExampleUnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/profileImg.jpg" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_user_stats.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SwipeDismissListViewTouchListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/c6663a86b89f08a0a0a5db9bcbfe4eed/jars/classes.jar!/com/google/android/gms/tasks/zzj.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/StartUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/GenericTypeIndicator.java" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="54" lean-forward="true" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149">
-          <caret line="112" column="19" selection-start-line="112" selection-start-column="19" selection-end-line="112" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/c6663a86b89f08a0a0a5db9bcbfe4eed/jars/classes.jar!/com/google/android/gms/tasks/zzn.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -730,13 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/ExerciseListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -799,52 +707,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_stats.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_profile.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_bmiinfo.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start_up.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="64" column="52" selection-start-line="53" selection-start-column="7" selection-end-line="64" selection-end-column="52" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_past_workouts_list_view.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="60" column="59" lean-forward="true" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_past_workouts.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -878,21 +770,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_workout_plans.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="153" column="36" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -909,12 +793,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_exercise.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/AddExercise.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -923,14 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_workout_log.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -938,40 +814,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_past_workout.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SelectedPlan.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutLog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        <state relative-caret-position="1632">
+          <caret line="133" column="29" selection-start-line="133" selection-start-column="29" selection-end-line="133" selection-end-column="29" />
           <folding>
-            <element signature="e#4827#4848#0" />
-            <element signature="method#Return#0;class#SelectedPlan#0" />
+            <element signature="method#AddExercise#0;class#WorkoutLog#0" />
+            <element signature="method#GoToPastWorkouts#0;class#WorkoutLog#0" />
+            <element signature="e#8212#8493#0" expanded="true" />
+            <element signature="e#8492#8493#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_selected_plan.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutLog.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/CreateProfile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding>
-            <element signature="method#AddExercise#0;class#WorkoutLog#0" />
-            <element signature="method#GoToPastWorkouts#0;class#WorkoutLog#0" />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkouts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/WorkoutPlans.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+        <state relative-caret-position="204">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
           <folding>
             <element signature="method#GoToSelectedPlan#0;class#WorkoutPlans#0" />
             <element signature="method#Return#0;class#WorkoutPlans#0" />
@@ -979,21 +852,417 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/PastWorkouts.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/DragSortListView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+        <state relative-caret-position="364">
+          <caret line="430" column="57" lean-forward="true" selection-start-line="430" selection-start-column="57" selection-end-line="430" selection-end-column="57" />
           <folding>
-            <element signature="e#1833#2464#0" expanded="true" />
-            <element signature="e#2463#2464#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5917#6065#0" expanded="true" />
+            <element signature="e#6064#6065#0" expanded="true" />
+            <element signature="e#15391#15392#0" expanded="true" />
+            <element signature="e#15431#15432#0" expanded="true" />
+            <element signature="e#15496#15497#0" expanded="true" />
+            <element signature="e#15536#15537#0" expanded="true" />
+            <element signature="e#15761#15762#0" expanded="true" />
+            <element signature="e#15800#15801#0" expanded="true" />
+            <element signature="e#15836#15837#0" expanded="true" />
+            <element signature="e#15874#15875#0" expanded="true" />
+            <element signature="e#16100#16101#0" expanded="true" />
+            <element signature="e#16137#16138#0" expanded="true" />
+            <element signature="e#17899#17900#0" expanded="true" />
+            <element signature="e#17941#17942#0" expanded="true" />
+            <element signature="e#18009#18010#0" expanded="true" />
+            <element signature="e#18048#18049#0" expanded="true" />
+            <element signature="e#18113#18114#0" expanded="true" />
+            <element signature="e#18172#18173#0" expanded="true" />
+            <element signature="e#18237#18238#0" expanded="true" />
+            <element signature="e#18294#18295#0" expanded="true" />
+            <element signature="e#18345#18346#0" expanded="true" />
+            <element signature="e#18395#18396#0" expanded="true" />
+            <element signature="e#18460#18461#0" expanded="true" />
+            <element signature="e#18520#18521#0" expanded="true" />
+            <element signature="e#18588#18589#0" expanded="true" />
+            <element signature="e#18647#18648#0" expanded="true" />
+            <element signature="e#18717#18718#0" expanded="true" />
+            <element signature="e#18782#18783#0" expanded="true" />
+            <element signature="e#18841#18842#0" expanded="true" />
+            <element signature="e#18899#18900#0" expanded="true" />
+            <element signature="e#18958#18959#0" expanded="true" />
+            <element signature="e#19012#19013#0" expanded="true" />
+            <element signature="e#19066#19067#0" expanded="true" />
+            <element signature="e#19115#19116#0" expanded="true" />
+            <element signature="e#25198#25199#0" expanded="true" />
+            <element signature="e#25251#25252#0" expanded="true" />
+            <element signature="e#33937#33938#0" expanded="true" />
+            <element signature="e#33977#33978#0" expanded="true" />
+            <element signature="e#34899#34900#0" expanded="true" />
+            <element signature="e#34950#34951#0" expanded="true" />
+            <element signature="e#35852#35853#0" expanded="true" />
+            <element signature="e#35903#35904#0" expanded="true" />
+            <element signature="e#37686#37687#0" expanded="true" />
+            <element signature="e#37725#37726#0" expanded="true" />
+            <element signature="e#38175#38176#0" expanded="true" />
+            <element signature="e#38226#38227#0" expanded="true" />
+            <element signature="e#41304#41305#0" expanded="true" />
+            <element signature="e#41342#41343#0" expanded="true" />
+            <element signature="e#44901#44902#0" expanded="true" />
+            <element signature="e#44962#44963#0" expanded="true" />
+            <element signature="e#49533#49534#0" expanded="true" />
+            <element signature="e#49576#49577#0" expanded="true" />
+            <element signature="e#74993#74994#0" expanded="true" />
+            <element signature="e#75036#75037#0" expanded="true" />
+            <element signature="e#75087#75088#0" expanded="true" />
+            <element signature="e#75120#75121#0" expanded="true" />
+            <element signature="e#75553#75554#0" expanded="true" />
+            <element signature="e#75591#75592#0" expanded="true" />
+            <element signature="e#75629#75630#0" expanded="true" />
+            <element signature="e#75664#75665#0" expanded="true" />
+            <element signature="e#76264#76265#0" expanded="true" />
+            <element signature="e#76297#76298#0" expanded="true" />
+            <element signature="e#76758#76759#0" expanded="true" />
+            <element signature="e#76793#76794#0" expanded="true" />
+            <element signature="e#88393#88394#0" expanded="true" />
+            <element signature="e#88434#88435#0" expanded="true" />
+            <element signature="e#88471#88472#0" expanded="true" />
+            <element signature="e#88531#88532#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/CreateProfile.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SimpleFloatViewManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="107" column="29" lean-forward="true" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+        <state relative-caret-position="1343">
+          <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+            <element signature="e#1846#1847#0" expanded="true" />
+            <element signature="e#3287#3288#0" expanded="true" />
+            <element signature="e#3323#3324#0" expanded="true" />
+            <element signature="e#3552#3553#0" expanded="true" />
+            <element signature="e#3588#3589#0" expanded="true" />
+            <element signature="e#3885#3886#0" expanded="true" />
+            <element signature="e#3923#3924#0" expanded="true" />
+            <element signature="e#3961#3962#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
+            <element signature="e#4218#4219#0" expanded="true" />
+            <element signature="e#4252#4253#0" expanded="true" />
+            <element signature="e#4286#4287#0" expanded="true" />
+            <element signature="e#4320#4321#0" expanded="true" />
+            <element signature="e#4455#4456#0" expanded="true" />
+            <element signature="e#4495#4496#0" expanded="true" />
+            <element signature="e#4535#4536#0" expanded="true" />
+            <element signature="e#4572#4573#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
+            <element signature="e#4808#4809#0" expanded="true" />
+            <element signature="e#5012#5013#0" expanded="true" />
+            <element signature="e#5047#5048#0" expanded="true" />
+            <element signature="e#5240#5241#0" expanded="true" />
+            <element signature="e#5275#5276#0" expanded="true" />
+            <element signature="e#8238#8239#0" expanded="true" />
+            <element signature="e#8286#8287#0" expanded="true" />
+            <element signature="e#13622#14606#0" expanded="true" />
+            <element signature="e#14605#14606#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortItemViewCheckable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortListPreferences.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4056#4070#0" expanded="true" />
+            <element signature="e#5850#5858#0" expanded="true" />
+            <element signature="e#6879#6893#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortItemView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortListPreference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4085#4099#0" expanded="true" />
+            <element signature="e#5879#5887#0" expanded="true" />
+            <element signature="e#6908#6922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SimpleDragSortCursorAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="34" column="7" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5638#5639#0" expanded="true" />
+            <element signature="e#5672#5673#0" expanded="true" />
+            <element signature="e#6049#6050#0" expanded="true" />
+            <element signature="e#6089#6090#0" expanded="true" />
+            <element signature="e#7404#7405#0" expanded="true" />
+            <element signature="e#7435#7436#0" expanded="true" />
+            <element signature="e#7932#7933#0" expanded="true" />
+            <element signature="e#7978#7979#0" expanded="true" />
+            <element signature="e#9381#9382#0" expanded="true" />
+            <element signature="e#9428#9429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39695">
+          <caret line="2335" lean-forward="true" selection-start-line="2335" selection-end-line="2335" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6616#6764#0" expanded="true" />
+            <element signature="e#6763#6764#0" expanded="true" />
+            <element signature="e#16090#16091#0" expanded="true" />
+            <element signature="e#16130#16131#0" expanded="true" />
+            <element signature="e#16195#16196#0" expanded="true" />
+            <element signature="e#16235#16236#0" expanded="true" />
+            <element signature="e#16460#16461#0" expanded="true" />
+            <element signature="e#16499#16500#0" expanded="true" />
+            <element signature="e#16535#16536#0" expanded="true" />
+            <element signature="e#16573#16574#0" expanded="true" />
+            <element signature="e#16799#16800#0" expanded="true" />
+            <element signature="e#16836#16837#0" expanded="true" />
+            <element signature="e#17837#17838#0" expanded="true" />
+            <element signature="e#17879#17880#0" expanded="true" />
+            <element signature="e#17947#17948#0" expanded="true" />
+            <element signature="e#17986#17987#0" expanded="true" />
+            <element signature="e#18051#18052#0" expanded="true" />
+            <element signature="e#18110#18111#0" expanded="true" />
+            <element signature="e#18175#18176#0" expanded="true" />
+            <element signature="e#18232#18233#0" expanded="true" />
+            <element signature="e#18283#18284#0" expanded="true" />
+            <element signature="e#18333#18334#0" expanded="true" />
+            <element signature="e#18398#18399#0" expanded="true" />
+            <element signature="e#18458#18459#0" expanded="true" />
+            <element signature="e#18526#18527#0" expanded="true" />
+            <element signature="e#18585#18586#0" expanded="true" />
+            <element signature="e#18655#18656#0" expanded="true" />
+            <element signature="e#18720#18721#0" expanded="true" />
+            <element signature="e#18779#18780#0" expanded="true" />
+            <element signature="e#18837#18838#0" expanded="true" />
+            <element signature="e#18896#18897#0" expanded="true" />
+            <element signature="e#18950#18951#0" expanded="true" />
+            <element signature="e#19004#19005#0" expanded="true" />
+            <element signature="e#19053#19054#0" expanded="true" />
+            <element signature="e#25136#25137#0" expanded="true" />
+            <element signature="e#25189#25190#0" expanded="true" />
+            <element signature="e#33875#33876#0" expanded="true" />
+            <element signature="e#33915#33916#0" expanded="true" />
+            <element signature="e#34837#34838#0" expanded="true" />
+            <element signature="e#34888#34889#0" expanded="true" />
+            <element signature="e#35790#35791#0" expanded="true" />
+            <element signature="e#35841#35842#0" expanded="true" />
+            <element signature="e#37624#37625#0" expanded="true" />
+            <element signature="e#37663#37664#0" expanded="true" />
+            <element signature="e#38113#38114#0" expanded="true" />
+            <element signature="e#38164#38165#0" expanded="true" />
+            <element signature="e#41242#41243#0" expanded="true" />
+            <element signature="e#41280#41281#0" expanded="true" />
+            <element signature="e#44839#44840#0" expanded="true" />
+            <element signature="e#44900#44901#0" expanded="true" />
+            <element signature="e#49471#49472#0" expanded="true" />
+            <element signature="e#49514#49515#0" expanded="true" />
+            <element signature="e#74931#74932#0" expanded="true" />
+            <element signature="e#74974#74975#0" expanded="true" />
+            <element signature="e#75025#75026#0" expanded="true" />
+            <element signature="e#75058#75059#0" expanded="true" />
+            <element signature="e#75491#75492#0" expanded="true" />
+            <element signature="e#75529#75530#0" expanded="true" />
+            <element signature="e#75567#75568#0" expanded="true" />
+            <element signature="e#75602#75603#0" expanded="true" />
+            <element signature="e#76202#76203#0" expanded="true" />
+            <element signature="e#76235#76236#0" expanded="true" />
+            <element signature="e#76696#76697#0" expanded="true" />
+            <element signature="e#76731#76732#0" expanded="true" />
+            <element signature="e#88331#88332#0" expanded="true" />
+            <element signature="e#88372#88373#0" expanded="true" />
+            <element signature="e#88409#88410#0" expanded="true" />
+            <element signature="e#88469#88470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/ResourceDragSortCursorAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4132#4133#0" expanded="true" />
+            <element signature="e#4164#4165#0" expanded="true" />
+            <element signature="e#4394#4395#0" expanded="true" />
+            <element signature="e#4442#4443#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragSortCursorAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#446#455#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#4007#4016#0" expanded="true" />
+            <element signature="e#4394#4395#0" expanded="true" />
+            <element signature="e#4466#4467#0" expanded="true" />
+            <element signature="e#4766#4767#0" expanded="true" />
+            <element signature="e#4825#4826#0" expanded="true" />
+            <element signature="e#5015#5024#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sort_list_array_dialog_preference.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dslv_attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/DragAndDropListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="e#1932#2030#0" />
+            <element signature="e#2036#2185#0" />
+            <element signature="e#2191#2316#0" />
+            <element signature="e#2322#2639#0" />
+            <element signature="e#3637#4383#0" />
+            <element signature="e#4389#4944#0" />
+            <element signature="e#4950#5261#0" />
+            <element signature="e#5267#5836#0" />
+            <element signature="e#5842#6385#0" />
+            <element signature="e#6391#6666#0" />
+            <element signature="e#6672#7099#0" />
+            <element signature="e#17164#17165#0" expanded="true" />
+            <element signature="e#17207#17208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/ExerciseListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jack/eee521_finalyearproject_b00708431_fitnesstracker/SelectedPlan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding>
+            <element signature="method#SaveWorkout#0;class#SelectedPlan#0" />
+            <element signature="method#Return#0;class#SelectedPlan#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_past_workout.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_past_workouts.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_selected_plan.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_view_layout.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/adapter_past_workouts_list_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_workout_log.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="76" column="37" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
         </state>
       </provider>
     </entry>

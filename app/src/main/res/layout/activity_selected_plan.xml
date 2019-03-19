@@ -27,6 +27,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="45dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/SelectedPlan_ReturnBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -36,9 +37,10 @@
 
     <Button
         android:id="@+id/SelectedPlan_ReturnBtn"
-        android:layout_width="88dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounder_edge"
         android:backgroundTint="@color/themeColourStart"
@@ -50,13 +52,14 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/SelectedPlan_SaveBtn"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/SelectedPlan_SaveBtn"
         android:layout_width="126dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rounder_edge"
         android:backgroundTint="@color/themeColourStart"

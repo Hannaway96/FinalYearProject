@@ -92,87 +92,92 @@ public class WorkoutLog extends AppCompatActivity {
         startActivity(intent);
 }
 
-    public void SaveWorkout(){
+    public void SaveWorkout(View view){
 
         if(exerciseList.size() == 0){
             Toast.makeText(WorkoutLog.this, "No exercises entered!", Toast.LENGTH_SHORT).show();
         }
         else {
-
-            //Creating workout
-            final Workout workout = new Workout();
-            final User user = new User();
-
-            //get the current date and format it to a string
-            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            Date date = new Date();
-            String datestr = dateFormat.format(date);
-
-            //creates workout date
-            workout.setWorkoutDateStr(datestr);
-
-            //Add workout details to workout object
-            for (int i = 0; i < exerciseList.size(); i++) {
-                workout.addExercise(exerciseList.get(i));
-            }
-
-            workout.setTotalExercises(0);    //counts total exercises
-            workout.setTotalReps(0);         //totals reps
-            workout.setTotalSets(0);         //totals sets
-            String userUid = firebaseAuth.getCurrentUser().getUid();    //gets current user signed in
-            workout.setUserUID(userUid);                                //Adds currentusers id to workout
-
-            //Saving workout to firebase
-            db.collection("Workouts").document().set(workout);
-
-            //UPDATING USER STATS
-            //Get the current user's document on firebase
-            final DocumentReference docRef = db.collection("Users").document(userUid);
-
-            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                    if (task.isSuccessful()) {
-                        DocumentSnapshot document = task.getResult();
-
-                        if (document.exists()) {
-
-                            //set the user's details to user object
-                            user.setUserName(document.get("userName").toString());
-                            user.setUserHeight(Double.parseDouble(document.get("userHeight").toString()));
-                            user.setUserWeight(Double.parseDouble(document.get("userWeight").toString()));
-                            user.setUserDOB(document.get("userDOB").toString());
-                            user.setUserGender(document.get("userGender").toString());
-                            user.setUserExercises_Completed(Integer.parseInt(document.get("userExercises_Completed").toString()));
-                            user.setUserWorkouts_Completed(Integer.parseInt(document.get("userWorkouts_Completed").toString()));
-
-                            //Increasing users total workouts count
-                            int currWorkoutCompleted = user.getUserWorkouts_Completed();
-                            currWorkoutCompleted++;
-
-                            //Increasing user's total exercises count
-                            int currExercisesCompleted = user.getUserExercises_Completed();
-                            currExercisesCompleted += workout.getTotalExercises();
-
-                            user.setUserWorkouts_Completed(currWorkoutCompleted);
-                            user.setUserExercises_Completed(currExercisesCompleted);
-
-                        } else {
-                            Log.d("MyApp", "DocumentSnapshot data: " + document.getData());
-                        }
-
-                        //Sending updated user statistics to firebase
-                        docRef.update("userExercises_Completed", user.getUserExercises_Completed());
-                        docRef.update("userWorkouts_Completed", user.getUserWorkouts_Completed());
-                    }
-                }
-            });
-
-            Toast.makeText(this, "Workout saved Successfully", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(WorkoutLog.this, Menu.class);
-            startActivity(intent);
-            finish();
+            //function saves data and sends it to firebase
+            PushToFirebase();
         }
+    }
+
+    public void PushToFirebase(){
+
+        //Creating workout
+        final Workout workout = new Workout();
+        final User user = new User();
+
+        //get the current date and format it to a string
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        String datestr = dateFormat.format(date);
+
+        //creates workout date
+        workout.setWorkoutDateStr(datestr);
+
+        //Add workout details to workout object
+        for (int i = 0; i < exerciseList.size(); i++) {
+            workout.addExercise(exerciseList.get(i));
+        }
+
+        workout.setTotalExercises(0);    //counts total exercises
+        workout.setTotalReps(0);         //totals reps
+        workout.setTotalSets(0);         //totals sets
+        String userUid = firebaseAuth.getCurrentUser().getUid();    //gets current user signed in
+        workout.setUserUID(userUid);                                //Adds currentusers id to workout
+
+        //Saving workout to firebase
+        db.collection("Workouts").document().set(workout);
+
+        //UPDATING USER STATS
+        //Get the current user's document on firebase
+        final DocumentReference docRef = db.collection("Users").document(userUid);
+
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+
+                    if (document.exists()) {
+
+                        //set the user's details to user object
+                        user.setUserName(document.get("userName").toString());
+                        user.setUserHeight(Double.parseDouble(document.get("userHeight").toString()));
+                        user.setUserWeight(Double.parseDouble(document.get("userWeight").toString()));
+                        user.setUserDOB(document.get("userDOB").toString());
+                        user.setUserGender(document.get("userGender").toString());
+                        user.setUserExercises_Completed(Integer.parseInt(document.get("userExercises_Completed").toString()));
+                        user.setUserWorkouts_Completed(Integer.parseInt(document.get("userWorkouts_Completed").toString()));
+
+                        //Increasing users total workouts count
+                        int currWorkoutCompleted = user.getUserWorkouts_Completed();
+                        currWorkoutCompleted++;
+
+                        //Increasing user's total exercises count
+                        int currExercisesCompleted = user.getUserExercises_Completed();
+                        currExercisesCompleted += workout.getTotalExercises();
+
+                        user.setUserWorkouts_Completed(currWorkoutCompleted);
+                        user.setUserExercises_Completed(currExercisesCompleted);
+
+                    } else {
+                        Log.d("MyApp", "DocumentSnapshot data: " + document.getData());
+                    }
+
+                    //Sending updated user statistics to firebase
+                    docRef.update("userExercises_Completed", user.getUserExercises_Completed());
+                    docRef.update("userWorkouts_Completed", user.getUserWorkouts_Completed());
+
+
+                    Toast.makeText(WorkoutLog.this, "Workout Saved", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(WorkoutLog.this, Menu.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     public void GoToPastWorkouts(View view){
@@ -191,10 +196,8 @@ public class WorkoutLog extends AppCompatActivity {
             adb.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    SaveWorkout();
-                    Toast.makeText(WorkoutLog.this, "Workout Saved", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(WorkoutLog.this, Menu.class);
-                    startActivity(intent);
+                    //function saves data and sends it to firebase
+                    PushToFirebase();
                 }
             });
 

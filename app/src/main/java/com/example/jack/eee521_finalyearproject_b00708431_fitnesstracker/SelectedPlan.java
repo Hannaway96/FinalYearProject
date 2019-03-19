@@ -46,7 +46,7 @@ public class SelectedPlan extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
 
-        workoutPlanList = (ListView)findViewById(R.id.SelectedPlan_ListView);
+        workoutPlanList = (ListView) findViewById(R.id.SelectedPlan_ListView);
         titleTxtView = (TextView)findViewById(R.id.SelectedPlan_Title_TxtView);
 
         //switch to set the exercise name array's content
@@ -77,7 +77,6 @@ public class SelectedPlan extends AppCompatActivity {
         GetExercises();
     }
 
-
     public void GetExercises(){
 
         for(int i = 0; i < exerciseNames.length; i++){
@@ -105,8 +104,8 @@ public class SelectedPlan extends AppCompatActivity {
         Collections.shuffle(exerciseList);
 
         //Have only 10 exercises in the workout
+        int index = 0;
         do{
-            int index = 0;
             exerciseList.remove(index);
             index++;
         }while(exerciseList.size() > 10);
@@ -114,8 +113,8 @@ public class SelectedPlan extends AppCompatActivity {
         ExerciseListAdapter adapter = new ExerciseListAdapter(this, R.layout.adapter_view_layout, exerciseList);
         workoutPlanList.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-    }
 
+    }
 
     public void SaveWorkout(View view){
 
