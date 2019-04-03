@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectedPlan"></activity>
+        <activity android:name=".EditUserDetails"></activity>
+        <activity android:name=".SelectedPlan" />
         <activity android:name=".BMIInfo" />
         <activity android:name=".UserStats" />
         <activity android:name=".PastWorkout" />

@@ -7,6 +7,21 @@
     tools:context=".UserStats">
 
 
+    <TextView
+        android:id="@+id/PStats_TitleTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/PStats_Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/titleColors"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/PStats_ImgView"
         android:layout_width="200dp"
@@ -25,21 +40,6 @@
         app:layout_constraintTop_toBottomOf="@+id/PStats_TitleTxtView"
         app:srcCompat="@drawable/user_stats_img" />
 
-
-    <TextView
-        android:id="@+id/PStats_TitleTxtView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="@string/PStats_Title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="@color/titleColors"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/PStats_UserName_Lbl_TxtView"
@@ -398,9 +398,30 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PStats_EditDetailsBtn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PStats_BMIInfo_TxtView" />
+
+    <Button
+        android:id="@+id/PStats_EditDetailsBtn"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounder_edge"
+        android:backgroundTint="@color/themeColourStart"
+        android:fontFamily="sans-serif-condensed-light"
+        android:onClick="GoToEditDetails"
+        android:text="@string/PStats_EditDetails_BtnTxt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PStats_BMIInfo_TxtView"
+        app:layout_constraintVertical_bias="0.51" />
 
 </android.support.constraint.ConstraintLayout>

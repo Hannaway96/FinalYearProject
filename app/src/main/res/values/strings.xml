@@ -42,6 +42,7 @@
     <string name="PStats_Users_BMIVal">...</string>
     <string name="PStats_Users_HealthStatusLbl">Health Status: </string>
     <string name="PStats_Users_HealthStatusVal">Healthy</string>
+    <string name="PStats_EditDetails_BtnTxt">Edit Details</string>
     <string name="PStats_BMI_Info">About BMI ?</string>
 
     <string name="BMIInfo_Title">BMI</string>
@@ -56,6 +57,9 @@
                                             Those with a lower muscle mass, such as children who have not completed their growth or the elderly who may be losing some muscle mass may have a lower BMI.
                                             During pregnancy and lactation, a woman\'s body composition changes, so using BMI is not appropriate.</string>
 
+    <string name="EditUserDetails_Title">Edit Details</string>
+    <string name="EditUserDetails_SaveBtn">Save</string>
+    <string name="EditUserDetails_CancelBtn">Cancel</string>
 
     <string name="WorkoutLog_add_Exercise_btn">Add Exercise</string>
     <string name="WorkoutLog_View_Past_Workout">View Past Workouts</string>

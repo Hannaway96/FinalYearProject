@@ -18,7 +18,7 @@ public class UserStats extends AppCompatActivity {
 
     FirebaseAuth firebaseAuth;
     FirebaseFirestore db;
-    User user = new User();
+    User user;
     TextView nameTxtView, dobTxtView, heightTxtView, weightTxtView, genderTxtView,
                 exercisesCompTxtView, workoutsCompTxtView, userBMITxtView, userHealthStatusTxtView;
 
@@ -31,6 +31,7 @@ public class UserStats extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+        user = new User();
 
         imgView = (ImageView)findViewById(R.id.PStats_ImgView);
         imgView.setClipToOutline(true);
@@ -71,8 +72,8 @@ public class UserStats extends AppCompatActivity {
                 heightTxtView.setText(String.valueOf(user.getUserHeight()));
                 weightTxtView.setText(String.valueOf(user.getUserWeight()));
                 genderTxtView.setText(user.getUserGender()+"");
-                exercisesCompTxtView.setText(String.valueOf(user.getUserExercises_Completed())+"");
-                workoutsCompTxtView.setText(String.valueOf(user.getUserWorkouts_Completed())+"");
+                exercisesCompTxtView.setText(String.valueOf(user.getUserExercises_Completed()));
+                workoutsCompTxtView.setText(String.valueOf(user.getUserWorkouts_Completed()));
 
                 CalBMI();
             }
@@ -88,20 +89,27 @@ public class UserStats extends AppCompatActivity {
         String bmiStr = String.format("%.2f", userBMI);
 
         if(userBMI <= 18.5){
-            userBMITxtView.setTextColor(Color.parseColor("#FF0000"));
             userBMITxtView.setText(bmiStr);
             userHealthStatusTxtView.setText("Under Weight");
+            userHealthStatusTxtView.setTextColor(Color.parseColor("#FF0000"));
         }
         else if(userBMI > 18.5  && userBMI <= 24.9){
-            userBMITxtView.setTextColor(Color.parseColor("#008000"));
             userBMITxtView.setText(bmiStr);
             userHealthStatusTxtView.setText("Healthy Weight");
+            userHealthStatusTxtView.setTextColor(Color.parseColor("#008000"));
         }
         else{
-            userBMITxtView.setTextColor(Color.parseColor("#FF0000"));
             userBMITxtView.setText(bmiStr);
             userHealthStatusTxtView.setText("Over Weight");
+            userHealthStatusTxtView.setTextColor(Color.parseColor("#FF0000"));
         }
+    }
+
+    public void GoToEditDetails(View view){
+        Intent intent = new Intent(UserStats.this, EditUserDetails.class);
+        startActivity(intent);
+        finish();
+
     }
 
     public void GoToBMIInfo(View view){
