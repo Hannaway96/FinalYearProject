@@ -123,21 +123,18 @@ public class SelectedPlan extends AppCompatActivity {
         final User user = new User();
 
         //get the current date and format it to a string
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = new Date();
-        String dateStr = dateFormat.format(date);
+        //DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        //Date date = new Date();
+        //String dateStr = dateFormat.format(date);
 
         //creates workout date
-        workout.setWorkoutDateStr(dateStr);
+        workout.setWorkoutDateStr();
 
         //Add workout details to workout object
         for (int i = 0; i < exerciseList.size(); i++) {
             workout.addExercise(exerciseList.get(i));
         }
 
-        workout.setTotalExercises(0);    //counts total exercises
-        workout.setTotalReps(0);         //totals reps
-        workout.setTotalSets(0);         //totals sets
         String userUid = firebaseAuth.getCurrentUser().getUid();    //gets current user signed in
         workout.setUserUID(userUid);                                //Adds current users id to workout
 

@@ -37,6 +37,7 @@ public class StartUp extends AppCompatActivity {
     private List<String> userList = new ArrayList<String>();
     private String TAG = "MyApp";
 
+    //TODO OVERRIDE BACK BUTTONS ON ALL ACTIVITIES
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

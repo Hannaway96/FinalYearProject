@@ -73,8 +73,13 @@ public class Workout implements Parcelable {
     };
 
     public void addExercise(Exercise input) {
-
         exercises.add(input);
+
+        //Every time an exercise is added, the stats automatically update
+
+        setTotalSets();
+        setTotalReps();
+        setTotalExercises();
     }
 
     public void setExercises(ArrayList<Exercise> list){
@@ -91,6 +96,11 @@ public class Workout implements Parcelable {
                 exercises.remove(input);
             }
         }
+
+        //Update totals
+        setTotalExercises();
+        setTotalReps();
+        setTotalSets();
     }
 
     public String getWorkoutUID(){
@@ -107,18 +117,15 @@ public class Workout implements Parcelable {
 
     public void setWorkoutDateStr(String dateStr){
 
-        //if argument in setDate has a value, set date to that date
-        if(dateStr != ""){
-            this.workoutDateStr = dateStr;
-        }
-        else{
-            //other wise use default date
-            //get the current date and format it to a string
-            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            Date date = new Date();
+        this.workoutDateStr = dateStr;
+    }
 
-            this.workoutDateStr = dateFormat.format(date);
-        }
+    public void setWorkoutDateStr(){
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+
+        this.workoutDateStr = dateFormat.format(date);
     }
 
     public int getTotalExercises() {
@@ -127,20 +134,16 @@ public class Workout implements Parcelable {
 
     public void setTotalExercises(int totalExercises) {
 
-        //check if argument in function has a value
-        if(totalExercises > 0) {
-            this.totalExercises = totalExercises;   //if it does equal it to totalExercises
-        }
-        else{
+        this.totalExercises = totalExercises;
+    }
 
-            //otherwise count exercises in list and total them
-            int count = 0;
-            for(int i =0; i < exercises.size(); i++){
-                count++;
-            }
+    public void setTotalExercises() {
 
-            this.totalExercises = count;
+        int count = 0;
+        for(int i =0; i < exercises.size(); i++){
+            count++;
         }
+        this.totalExercises = count;
     }
 
     public int getTotalReps() {
@@ -148,22 +151,22 @@ public class Workout implements Parcelable {
     }
 
     public void setTotalReps(int totalReps) {
+        this.totalReps = totalReps;
+    }
+
+    public void setTotalReps() {
         int repNum = 0;
         int timesRep;
         int tot = 0;
 
-        if(totalReps > 0){
-            this.totalReps = totalReps;
-        }
-        else {
-            for (int i = 0; i < exercises.size(); i++) {
+        for (int i = 0; i < exercises.size(); i++) {
 
-                repNum = exercises.get(i).getNoOfReps();
-                timesRep = repNum * exercises.get(i).getNoOfSets();
-                tot += timesRep;
-            }
-            this.totalReps = tot;
+            repNum = exercises.get(i).getNoOfReps();
+            timesRep = repNum * exercises.get(i).getNoOfSets();
+            tot += timesRep;
         }
+
+        this.totalReps = tot;
     }
 
     public int getTotalSets() {
@@ -171,19 +174,16 @@ public class Workout implements Parcelable {
     }
 
     public void setTotalSets(int totalSets) {
+        this.totalSets = totalSets;
+    }
+
+    public void setTotalSets() {
         int setNum = 0;
 
-        if(totalSets > 0){
-
-            this.totalSets = totalSets;
+        for(int i = 0; i <exercises.size(); i++){
+            setNum += exercises.get(i).getNoOfSets();
         }
-        else{
-
-            for(int i = 0; i <exercises.size(); i++){
-                setNum += exercises.get(i).getNoOfSets();
-            }
-            this.totalSets = setNum;
-        }
+        this.totalSets = setNum;
     }
 
     public String getUserUID() {

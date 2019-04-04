@@ -21,6 +21,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -56,13 +60,20 @@ public class CreateProfile extends AppCompatActivity {
 
     public void Register_Accepted(View view) {
 
-        String userEmail = emailEditTxt.getText().toString();
-        String userPassword = passwordEditTxt.getText().toString();
-        String userName = usernameEditTxt.getText().toString();
-        double userHeight = Double.parseDouble(userHeightEditTxt.getText().toString());
-        double userWeight = Double.parseDouble(userWeightEditTxt.getText().toString());
-        String userDob = userDOBEditTxt.getText().toString();
-        String gender = "";
+        String userEmail = "", userPassword = "", userName = "", userDob = "", gender = "";
+        double userHeight = 0.00, userWeight = 0.00;
+
+
+        try {
+            userEmail = emailEditTxt.getText().toString();
+            userPassword = passwordEditTxt.getText().toString();
+            userName = usernameEditTxt.getText().toString();
+            userHeight = Double.parseDouble(userHeightEditTxt.getText().toString());
+            userWeight = Double.parseDouble(userWeightEditTxt.getText().toString());
+            userDob = userDOBEditTxt.getText().toString();
+            gender = "";
+        }
+        catch(Exception e){}
 
         if (maleRadBtn.isChecked() == true) {
             gender = "Male";
@@ -102,23 +113,31 @@ public class CreateProfile extends AppCompatActivity {
 
     public boolean Validation(String email, String password,String username, double height, double weight, String dob, String gender) {
 
-        //TODO add in some kind of date validation-----------------------------------------------------------------------------------------------------
-
         try {
             //Null validation
             if (email.equals("") || password.equals("") || username.equals("") || height <= 0 || weight <= 0 || dob.equals("") || gender.equals("")) {
                 Toast.makeText(CreateProfile.this, "Please fill out all fields provided", Toast.LENGTH_SHORT).show();
                 return false;
-            } else if (gender.equals("") || gender.equals("")) {
+            }
+            if (gender.equals("") || gender.equals("")) {
                 //setting the gender of the user
                 Toast.makeText(CreateProfile.this, "Please select a gender", Toast.LENGTH_SHORT).show();
                 return false;
             }
+
             if (TextUtils.isEmpty(email)) {
                 Toast.makeText(this, "Please enter Email", Toast.LENGTH_SHORT).show();
                 return false;
             } else if (TextUtils.isEmpty(password)) {
                 Toast.makeText(this, "Please enter Password", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+
+            //TODO look over date validation again using regular expressions
+            //Date validation
+            if(validDate(dob) == false){
+                Toast.makeText(CreateProfile.this, "Please enter a valid date of birth (dd/mm/yyyy)", Toast.LENGTH_SHORT).show();
                 return false;
             }
 
@@ -139,5 +158,17 @@ public class CreateProfile extends AppCompatActivity {
             Log.d(TAG, ex.getMessage());
         }
         return true;
+    }
+
+    public static boolean validDate(String date){
+
+        try{
+            DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+            format.setLenient(false);
+            format.parse(date);
+            return true;
+        }catch(ParseException e){
+            return false;
+        }
     }
 }

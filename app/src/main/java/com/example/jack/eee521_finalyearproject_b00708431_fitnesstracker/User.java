@@ -87,18 +87,4 @@ public class User {
     public void setUserWorkouts_Completed(int userWorkouts_Completed) {
         this.userWorkouts_Completed = userWorkouts_Completed;
     }
-
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "userName='" + userName + '\'' +
-                ", userHeight=" + userHeight +
-                ", userWeight=" + userWeight +
-                ", userDOB=" + userDOB +
-                ", userGender='" + userGender + '\'' +
-                ", userExercises_Completed=" + userExercises_Completed +
-                ", userWorkouts_Completed=" + userWorkouts_Completed +
-                '}';
-    }
 }
