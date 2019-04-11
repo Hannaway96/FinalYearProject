@@ -75,12 +75,12 @@ public class UserStats extends AppCompatActivity {
                 exercisesCompTxtView.setText(String.valueOf(user.getUserExercises_Completed()));
                 workoutsCompTxtView.setText(String.valueOf(user.getUserWorkouts_Completed()));
 
-                CalBMI();
+                CalculateBMI();
             }
         });
     }
 
-    public void CalBMI(){
+    public void CalculateBMI(){
 
         double weight = user.getUserWeight();
         double height = user.getUserHeight();
@@ -109,7 +109,6 @@ public class UserStats extends AppCompatActivity {
         Intent intent = new Intent(UserStats.this, EditUserDetails.class);
         startActivity(intent);
         finish();
-
     }
 
     public void GoToBMIInfo(View view){

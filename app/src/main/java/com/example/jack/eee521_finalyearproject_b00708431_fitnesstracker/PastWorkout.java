@@ -1,31 +1,19 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import android.content.Intent;
-import android.nfc.Tag;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.ArrayMap;
-import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class PastWorkout extends AppCompatActivity {
@@ -55,8 +43,20 @@ public class PastWorkout extends AppCompatActivity {
         returnBtn = (Button)findViewById(R.id.PastWorkout_ReturnBtn);
 
         populateActivity(workoutID);
-}
 
+        //Takes the user to the exercise help screen when an exercise is clicked
+        pastExerciseList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Exercise exercise = pastExercises.get(position);
+                String exerciseName = exercise.getExerciseName();
+
+                Intent intent = new Intent(PastWorkout.this, ExerciseHelp.class);
+                intent.putExtra("serializedExerciseName", exerciseName);
+                startActivity(intent);
+            }
+        });
+    }
 
     public void populateActivity(final String workoutID){
 

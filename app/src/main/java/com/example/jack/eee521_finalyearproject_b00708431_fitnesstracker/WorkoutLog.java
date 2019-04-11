@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -80,6 +81,19 @@ public class WorkoutLog extends AppCompatActivity {
             }
         });
         workoutListView.setOnTouchListener(touchListener);
+
+        //Selecting the exercise will send the user to the exercise help page
+        workoutListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Exercise exercise = exerciseList.get(position);
+                String exerciseName = exercise.getExerciseName();
+
+                Intent intent = new Intent(WorkoutLog.this, ExerciseHelp.class);
+                intent.putExtra("serializedExerciseName", exerciseName);
+                startActivity(intent);
+            }
+        });
     }
 
     public void AddExercise(View view){

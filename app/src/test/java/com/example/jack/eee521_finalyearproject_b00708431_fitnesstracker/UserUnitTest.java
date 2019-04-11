@@ -1,7 +1,6 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import org.junit.Test;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,7 +12,8 @@ import static org.junit.Assert.*;
 public class UserUnitTest {
 
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
-    public static final Pattern VALID_DATE_OF_BIRTH_FORMAT = Pattern.compile("^([0-2][0-9]|(3)[0-1])((\\/)|(.))(((0)[0-9])|((1)[0-2]))((\\/)|(.))\\d{4}$");
+    public static final Pattern VALID_DATE_OF_BIRTH_FORMAT = Pattern.compile("^(([1-2][0-9])|([1-9])|(3[0-1]))(\\/)((1[0-2])|([1-9]))(\\/)[0-9]{4}$");
+
 
     @Test
     public void testUser_hasDetails(){
@@ -44,14 +44,15 @@ public class UserUnitTest {
     @Test
     public void testUser_DOBFormatIsValid(){
         User testUser = CreateUser();
-        assertTrue(validateDateFormat(testUser.getUserDOB()));
+        testUser.setUserDOB("30_4_2017");
+        assertFalse(validateDateFormat(testUser.getUserDOB()));
     }
 
     @Test
     public void testUser_DOBIsValid(){
         User testUser = CreateUser();
-        testUser.setUserDOB("35/03/2010");
-        assertFalse(validDate(testUser.getUserDOB()));
+        testUser.setUserDOB("30/03/2010");
+        assertTrue(validDate(testUser.getUserDOB()));
     }
 
     public static boolean validateEmail(String emailStr){
@@ -76,7 +77,7 @@ public class UserUnitTest {
     }
 
     public User CreateUser(){
-        String email = "jack@mail.com", name = "Jack", userDob = "30.02.1996", gender = "Male";
+        String email = "jack@mail.co.uk", name = "Jack", userDob = "20/07/1996", gender = "Male";
         Double height = 178.0, weight = 78.0;
 
         User testUser = new User(email, name, height, weight, userDob, gender);
@@ -85,6 +86,4 @@ public class UserUnitTest {
         testUser.setUserWorkouts_Completed(5);
         return testUser;
     }
-
-
 }

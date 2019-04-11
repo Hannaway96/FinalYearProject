@@ -31,10 +31,8 @@ public class StartUp extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     final private int REQUEST_INTERNET = 123;
-    private Button createProfileBtn;
     private EditText usernameEditTxt, passwordEditTxt;
     private ImageView imageView;
-    private List<String> userList = new ArrayList<String>();
     private String TAG = "MyApp";
 
     //TODO OVERRIDE BACK BUTTONS ON ALL ACTIVITIES
@@ -44,25 +42,21 @@ public class StartUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_up);
 
+        //Create an instance of Authorisation link to Firebase
         firebaseAuth = FirebaseAuth.getInstance();
 
         //Checks if the user wishes to close the application
         if(getIntent().getBooleanExtra("EXIT", false)){
             finish();
         }
-        //Create an instance of Authorisation link to Firebase
 
-        createProfileBtn = (Button)findViewById(R.id.Start_Up_Create_Profile_btn);
         usernameEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Username);
         passwordEditTxt = (EditText)findViewById(R.id.StartUp_EditText_Password);
         imageView = (ImageView)findViewById(R.id.PStats_ImgView);
-
-
         imageView.setClipToOutline(true);
 
         //CheckNetwork checks if the user is connected to the internet
         CheckNetwork();
-
     }
 
    public void CheckNetwork(){
@@ -72,7 +66,7 @@ public class StartUp extends AppCompatActivity {
 
        if (isOnline() == false) {
 
-           AlertDialog.Builder adb = new AlertDialog.Builder(this);
+           AlertDialog.Builder adb = new AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert);
            adb.setTitle("Check Network Connection")
                    .setMessage("Features within this app require internet access. Do you want to connect to the Internet?")
                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -117,9 +111,8 @@ public class StartUp extends AppCompatActivity {
 
 
     public void LogIn(View view) {
-
-        String email = ((EditText) findViewById(R.id.StartUp_EditText_Username)).getText().toString();
-        String password = ((EditText) findViewById(R.id.StartUp_EditText_Password)).getText().toString();
+        String email = usernameEditTxt.getText().toString();
+        String password = passwordEditTxt.getText().toString();
 
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(this, "Please enter Email", Toast.LENGTH_SHORT).show();
@@ -145,7 +138,6 @@ public class StartUp extends AppCompatActivity {
 
 
     public void CreateProfile(View view){
-
         //Opens CreateProfile Activity
         Intent intent = new Intent(StartUp.this, CreateProfile.class);
         startActivity(intent);

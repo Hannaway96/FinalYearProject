@@ -1,18 +1,32 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
 import org.junit.Test;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static org.junit.Assert.*;
 
 public class WorkoutUnitTest {
 
-    public static final Pattern VALID_DATE_OF_BIRTH_FORMAT = Pattern.compile("^([0-2][0-9]|(3)[0-1])((\\/)|(.))(((0)[0-9])|((1)[0-2]))((\\/)|(.))\\d{4}$");
+
+    @Test
+    public void testWorkout_ExercisesArrayWorksCorrectly(){
+        Workout workout = CreateWorkout();
+        assertEquals(6, workout.getExercises().size());
+
+        Exercise exercise = new Exercise("Any", "Random", 5, 2);
+
+        for(int i = 0; i <5; i++){
+            workout.addExercise(exercise);
+        }
+        assertEquals(11, workout.getTotalExercises());
+
+        for(int i=0; i<2; i++) {
+            workout.removeExercise(exercise);
+        }
+        assertEquals(9, workout.getTotalExercises());
+    }
 
     @Test
     public void testWorkout_TotalsCorrect(){
@@ -37,6 +51,7 @@ public class WorkoutUnitTest {
         Workout workout = CreateWorkout();
         Exercise exercise = new Exercise("Back", "Decline Row", 20, 10);
         workout.addExercise(exercise);
+        assertEquals(7, workout.getTotalExercises());
         assertEquals(500, workout.getTotalReps());
     }
 

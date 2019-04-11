@@ -70,6 +70,14 @@ public class AddExercise extends AppCompatActivity{
         });
     }
 
+    public void GoToExerciseInfo(View view){
+        String exerciseName = exerciseSpinner.getSelectedItem().toString();
+        Intent intent = new Intent(AddExercise.this, ExerciseHelp.class);
+        intent.putExtra("serializedExerciseName", exerciseName);
+        startActivity(intent);
+        finish();
+    }
+
 
     public void GetExercises(String type){
 

@@ -91,9 +91,11 @@ public class Workout implements Parcelable {
     }
 
     public void removeExercise(Exercise input){
-        for(int i=0; i<exercises.size(); i++){
+
+        for(int i=exercises.size()-1; i>0; i--){
             if (exercises.get(i) == input) {
                 exercises.remove(input);
+                break;
             }
         }
 
@@ -116,15 +118,12 @@ public class Workout implements Parcelable {
     }
 
     public void setWorkoutDateStr(String dateStr){
-
         this.workoutDateStr = dateStr;
     }
 
     public void setWorkoutDateStr(){
-
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
-
         this.workoutDateStr = dateFormat.format(date);
     }
 

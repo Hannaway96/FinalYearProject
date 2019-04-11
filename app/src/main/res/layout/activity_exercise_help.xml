@@ -6,4 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".ExerciseHelp">
 
+    <TextView
+        android:id="@+id/ExerciseHelp_TitleTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/ExerciseHelp_Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/titleColors"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ExerciseHelp_ExerciseImgView"
+        android:layout_width="376dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ExerciseHelp_TitleTxtView" />
+
+    <TextView
+        android:id="@+id/ExerciseHelp_NameLblTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/ExerciseHelp_ExerciseNameLbl"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/titleColors"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ExerciseHelp_ExerciseImgView" />
+
+    <TextView
+        android:id="@+id/ExerciseHelp_NameValTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/ExerciseHelp_ExerciseNameVal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ExerciseHelp_NameLblTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/ExerciseHelp_NameLblTxtView" />
+
+    <TextView
+        android:id="@+id/ExerciseHelp_InfoLblTxtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/ExerciseHelp_HelpLbl"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/titleColors"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ExerciseHelp_NameValTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/ExerciseHelp_NameValTxtView" />
+
+    <TextView
+        android:id="@+id/ExerciseHelp_InfoValTxtView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/ExerciseHelp_HelpVal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ExerciseHelp_InfoLblTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/ExerciseHelp_InfoLblTxtView" />
+
+    <Button
+        android:id="@+id/ExerciseHelp_ReturnBtn"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounder_edge"
+        android:backgroundTint="@color/themeColourStart"
+        android:fontFamily="sans-serif-condensed-light"
+        android:onClick="Return"
+        android:text="@string/PastWorkout_Return_Btn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WorkoutListView" />
+
 </android.support.constraint.ConstraintLayout>

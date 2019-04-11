@@ -73,6 +73,7 @@
     <string name="AddExercise_RepsTxt"># of Reps</string>
     <string name="AddExercise_Add_Btn">Add</string>
     <string name="AddExercise_Cancel_Btn">Cancel</string>
+    <string name="AddExercise_ViewInfo_Txt">View exercise info</string>
 
     <string name="PastWorkouts_Title">Past Workouts</string>
     <string name="PastWorkout_Return_Btn">Return</string>
@@ -94,8 +95,13 @@
     <string name="WorkoutPlans_Legs_Title">Legs Workout</string>
     <string name="WorkoutPlans_Return">Return</string>
 
-
     <string name="SelectedPlan_Title">Selected Plan</string>
+
+    <string name="ExerciseHelp_Title">Exercise Info</string>
+    <string name="ExerciseHelp_ExerciseNameLbl">Exercise:</string>
+    <string name="ExerciseHelp_ExerciseNameVal">...</string>
+    <string name="ExerciseHelp_HelpLbl">Info - tips:</string>
+    <string name="ExerciseHelp_HelpVal">...</string>
 
     <!-- Resource Arrays-->
 
@@ -113,9 +119,9 @@
         <item>Heel Touch</item>
         <item>Leg Raises</item>
         <item>Mountain Climbers</item>
-        <item>Plank</item>
+        <item>Plank Walk</item>
         <item>Russian Twists</item>
-        <item>Side Plank</item>
+        <item>Side Plank Raises</item>
         <item>Sit-Ups</item>
         <item>V-Ups</item>
     </string-array>
@@ -124,7 +130,7 @@
         <item>Barbell Curl</item>
         <item>Cable Curl</item>
         <item>Cable Front Raises</item>
-        <item>Diamond Push ups</item>
+        <item>Diamond Push Ups</item>
         <item>Dumbbell Front Raises</item>
         <item>Dumbbell Shoulder Press</item>
         <item>Machine Shoulder Press</item>
@@ -146,7 +152,7 @@
         <item>Face Pulls</item>
         <item>Inverted Rows</item>
         <item>Lateral Pulldown</item>
-        <item>Pull up (Wide/Close Grip)</item>
+        <item>Pull Up</item>
         <item>Rear Deltoid Flies</item>
         <item>Rear Deltoid Row</item>
         <item>Single Arm Dumbbell Row</item>
@@ -165,7 +171,7 @@
         <item>Flat Dumbbell Bench Press</item>
         <item>Incline Bench Press</item>
         <item>Incline Dumbbell Bench Press</item>
-        <item>Push-Ups</item>
+        <item>Push-Up</item>
         <item>Push-Up and Rotation</item>
         <item>Seated Machine Chest Fly</item>
         <item>Seated Machine Chest Press</item>
@@ -184,6 +190,6 @@
         <item>Seated Thigh Abductores</item>
         <item>Seated Thigh Aductores</item>
         <item>Standing Calf Raise</item>
-        <item>Squat(Back/Front/Sumo)</item>
+        <item>Squat</item>
     </string-array>
 </resources>

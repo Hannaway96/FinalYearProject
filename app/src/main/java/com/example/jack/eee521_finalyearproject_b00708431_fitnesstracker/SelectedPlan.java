@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -75,6 +76,18 @@ public class SelectedPlan extends AppCompatActivity {
         //Set the title text to reflect the chosen workout plan
         titleTxtView.setText( planType + " Workout Plan");
         GetExercises();
+
+        workoutPlanList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Exercise exercise = exerciseList.get(position);
+                String exerciseName = exercise.getExerciseName();
+
+                Intent intent = new Intent(SelectedPlan.this, ExerciseHelp.class);
+                intent.putExtra("serializedExerciseName", exerciseName);
+                startActivity(intent);
+            }
+        });
     }
 
     public void GetExercises(){
