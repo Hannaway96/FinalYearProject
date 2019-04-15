@@ -108,4 +108,11 @@ public class PastWorkout extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(PastWorkout.this, PastWorkouts.class);
+        startActivity(intent);
+        finish();
+    }
 }

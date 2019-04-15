@@ -81,7 +81,6 @@ public class WorkoutPlans extends AppCompatActivity {
     }
 
     public void GoToSelectedPlan(String type){
-
         Intent intent = new Intent(WorkoutPlans.this, SelectedPlan.class);
         intent.putExtra("serialized_type", type);
         startActivity(intent);
@@ -89,6 +88,13 @@ public class WorkoutPlans extends AppCompatActivity {
     }
 
     public void Return(View view){
+        Intent intent = new Intent(WorkoutPlans.this, Menu.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed(){
         Intent intent = new Intent(WorkoutPlans.this, Menu.class);
         startActivity(intent);
         finish();

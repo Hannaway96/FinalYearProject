@@ -31,8 +31,7 @@ import java.util.ArrayList;
 public class ExerciseHelp extends AppCompatActivity {
 
     FirebaseFirestore db;
-    FirebaseAuth firebaseAuth;
-
+    ImageView imageView;
     TextView exerciseNameTxtView, infoTextView;
     String exerciseName;
     String imageUrl;
@@ -47,6 +46,9 @@ public class ExerciseHelp extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         exerciseNameTxtView = (TextView)findViewById(R.id.ExerciseHelp_NameValTxtView);
         infoTextView = (TextView)findViewById(R.id.ExerciseHelp_InfoValTxtView);
+
+        imageView = (ImageView)findViewById(R.id.ExerciseHelp_ExerciseImgView);
+        imageView.setClipToOutline(true);
 
         PopulateExerciseInfo(exerciseName);
     }

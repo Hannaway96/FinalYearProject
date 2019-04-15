@@ -73,4 +73,12 @@ public class Menu extends AppCompatActivity {
         intent.putExtra("EXIT", true);
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(Menu.this, Menu.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.putExtra("EXIT", true);
+        startActivity(intent);
+    }
 }

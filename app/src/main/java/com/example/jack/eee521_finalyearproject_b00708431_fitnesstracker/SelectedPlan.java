@@ -204,7 +204,13 @@ public class SelectedPlan extends AppCompatActivity {
     }
 
     public void Return(View view){
+        Intent intent = new Intent(SelectedPlan.this, WorkoutPlans.class);
+        startActivity(intent);
+        finish();
+    }
 
+    @Override
+    public void onBackPressed(){
         Intent intent = new Intent(SelectedPlan.this, WorkoutPlans.class);
         startActivity(intent);
         finish();

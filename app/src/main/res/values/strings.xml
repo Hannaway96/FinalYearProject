@@ -43,6 +43,7 @@
     <string name="PStats_Users_HealthStatusLbl">Health Status: </string>
     <string name="PStats_Users_HealthStatusVal">Healthy</string>
     <string name="PStats_EditDetails_BtnTxt">Edit Details</string>
+    <string name="PStats_DeleteProfile_BtnTxt">Delete Profile</string>
     <string name="PStats_BMI_Info">About BMI ?</string>
 
     <string name="BMIInfo_Title">BMI</string>

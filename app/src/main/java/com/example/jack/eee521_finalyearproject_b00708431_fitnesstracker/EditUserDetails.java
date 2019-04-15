@@ -87,6 +87,13 @@ public class EditUserDetails extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(EditUserDetails.this, UserStats.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void SaveDetails(View view) {
 
         User newDetails = new User();

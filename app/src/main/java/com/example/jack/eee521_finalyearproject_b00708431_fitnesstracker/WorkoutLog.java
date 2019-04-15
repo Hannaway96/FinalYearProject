@@ -198,8 +198,16 @@ public class WorkoutLog extends AppCompatActivity {
     }
 
     public void MenuReturn(View view){
-
         //Make sure the user has saved their progress otherwise
+        GeneralReturn();
+    }
+
+    @Override
+    public void onBackPressed(){
+        GeneralReturn();
+    }
+
+    public void  GeneralReturn(){
         if(exerciseList.size() > 0) {
             AlertDialog.Builder adb = new AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert);
             adb.setTitle("Workout not saved");

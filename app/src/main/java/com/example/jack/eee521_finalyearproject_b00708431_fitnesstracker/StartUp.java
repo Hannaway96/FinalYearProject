@@ -35,8 +35,6 @@ public class StartUp extends AppCompatActivity {
     private ImageView imageView;
     private String TAG = "MyApp";
 
-    //TODO OVERRIDE BACK BUTTONS ON ALL ACTIVITIES
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

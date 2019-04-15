@@ -91,7 +91,7 @@
         android:ems="10"
         android:fontFamily="sans-serif-condensed-light"
         android:hint="@string/create_profile_dob"
-        android:inputType="date"
+        android:inputType="text"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/colorPrimary"
