@@ -9,9 +9,9 @@ import android.view.View;
 
 public class WorkoutPlans extends AppCompatActivity {
 
-    ImageView chestImgView, backImgView, absImgView, legsImgView, armsImgView;
-    CardView chestCardView, backCardView, absCardView, legsCardView, armsCardView;
-    String planType = "";
+    private ImageView chestImgView, backImgView, absImgView, legsImgView, armsImgView;
+    private CardView chestCardView, backCardView, absCardView, legsCardView, armsCardView;
+    private String planType = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +80,7 @@ public class WorkoutPlans extends AppCompatActivity {
 
     }
 
-    public void GoToSelectedPlan(String type){
+    private void GoToSelectedPlan(String type){
         Intent intent = new Intent(WorkoutPlans.this, SelectedPlan.class);
         intent.putExtra("serialized_type", type);
         startActivity(intent);

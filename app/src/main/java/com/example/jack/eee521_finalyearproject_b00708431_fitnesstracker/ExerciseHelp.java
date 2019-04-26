@@ -1,40 +1,31 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
 
 public class ExerciseHelp extends AppCompatActivity {
 
-    FirebaseFirestore db;
-    ImageView imageView;
-    TextView exerciseNameTxtView, infoTextView;
-    String exerciseName;
-    String imageUrl;
+    private FirebaseFirestore db;
+    private ImageView imageView;
+    private TextView exerciseNameTxtView, infoTextView;
+    private String exerciseName;
+    private String imageUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +44,7 @@ public class ExerciseHelp extends AppCompatActivity {
         PopulateExerciseInfo(exerciseName);
     }
 
-
-    public void PopulateExerciseInfo(String exerciseName){
+    private void PopulateExerciseInfo(String exerciseName){
 
         //reference the document relating to the specified exercise
         DocumentReference docRef = db.collection("Exercises").document(exerciseName);

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -19,12 +18,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class EditUserDetails extends AppCompatActivity {
 
-    FirebaseAuth firebaseAuth;
-    FirebaseFirestore db;
-    User user;
-    EditText usernameEditText, dobEditText, heightEditText, weightEditText;
-    RadioButton maleRadBtn, femaleRadBtn;
-    String userUID;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseFirestore db;
+    private User user;
+    private EditText usernameEditText, dobEditText, heightEditText, weightEditText;
+    private RadioButton maleRadBtn, femaleRadBtn;
+    private String userUID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,20 +46,23 @@ public class EditUserDetails extends AppCompatActivity {
     }
 
 
-    public void FillDetails(String userUID){
+    private void FillDetails(String userUID){
 
+        //retrive users details from firebase
         DocumentReference docRef = db.collection("Users").document(userUID);
 
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
 
+                //Set the user object properties to the user's details if the document get was successful
                 user.setUserName(documentSnapshot.get("userName").toString());
                 user.setUserDOB(documentSnapshot.get("userDOB").toString());
                 user.setUserHeight(Double.parseDouble(documentSnapshot.get("userHeight").toString()));
                 user.setUserWeight(Double.parseDouble(documentSnapshot.get("userWeight").toString()));
                 user.setUserGender(documentSnapshot.get("userGender").toString());
 
+                //fill out all fields with the user's details
                 usernameEditText.setText(user.getUserName());
                 dobEditText.setText(user.getUserDOB());
                 heightEditText.setText(String.valueOf(user.getUserHeight()));
@@ -104,7 +106,8 @@ public class EditUserDetails extends AppCompatActivity {
         String gender = (maleRadBtn.isChecked()) ? "Male" : "Female";
         newDetails.setUserGender(gender);
 
-        UpdateFirebase(newDetails);
+        //call update function and pass in the new details user object
+        UpdateDB(newDetails);
 
         Toast.makeText(EditUserDetails.this, "Details updated", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(EditUserDetails.this, UserStats.class);
@@ -112,7 +115,7 @@ public class EditUserDetails extends AppCompatActivity {
         finish();
     }
 
-    public void UpdateFirebase(final User updateUser){
+    private void UpdateDB(final User updateUser){
 
         final DocumentReference docRef = db.collection("Users").document(userUID);
 
@@ -124,6 +127,7 @@ public class EditUserDetails extends AppCompatActivity {
 
                     if (document.exists()) {
 
+                        // only wrie to firestore if the new details are different from the old ones
                         if (user.getUserName() != updateUser.getUserName()) {
                             docRef.update("userName", updateUser.getUserName());
                         }

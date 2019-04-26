@@ -11,22 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.firestore.FirebaseFirestore;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 
 public class CreateProfile extends AppCompatActivity {
 
@@ -80,10 +73,12 @@ public class CreateProfile extends AppCompatActivity {
         } else if (femaleRadBtn.isChecked() == true) {
             gender = "Female";
         }
-        //Instantiate new User class and add values from Create profile into values.
-        final User user = new User(userEmail, userName, userHeight, userWeight, userDob, gender);
+
 
         if(Validation(userEmail, userPassword, userName, userHeight, userWeight, userDob, gender) == true) {
+            //Instantiate new User class and add values from Create profile into values.
+            final User user = new User(userEmail, userName, userHeight, userWeight, userDob, gender);
+
             firebaseAuth.createUserWithEmailAndPassword(userEmail, userPassword)
                     .addOnCompleteListener(CreateProfile.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -111,8 +106,8 @@ public class CreateProfile extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public boolean Validation(String email, String password,String username, double height, double weight, String dob, String gender) {
-
+    private boolean Validation(String email, String password,String username, double height, double weight, String dob, String gender) {
+        //Validation function, all fields must pass before the overall function returns true
         try {
             //Null validation
             if (email.equals("") || password.equals("") || username.equals("") || height <= 0 || weight <= 0 || dob.equals("") || gender.equals("")) {
@@ -133,9 +128,6 @@ public class CreateProfile extends AppCompatActivity {
                 return false;
             }
 
-
-            //TODO look over date validation again using regular expressions
-            //Date validation
             if(validDate(dob) == false){
                 Toast.makeText(CreateProfile.this, "Please enter a valid date of birth (dd/mm/yyyy)", Toast.LENGTH_SHORT).show();
                 return false;
@@ -160,8 +152,7 @@ public class CreateProfile extends AppCompatActivity {
         return true;
     }
 
-    public static boolean validDate(String date){
-
+    private static boolean validDate(String date){
         try{
             DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
             format.setLenient(false);

@@ -57,7 +57,7 @@ public class StartUp extends AppCompatActivity {
         CheckNetwork();
     }
 
-   public void CheckNetwork(){
+   private void CheckNetwork(){
        if (ContextCompat.checkSelfPermission(StartUp.this, Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
            ActivityCompat.requestPermissions(StartUp.this, new String[]{Manifest.permission.INTERNET}, REQUEST_INTERNET);
        }
@@ -107,7 +107,6 @@ public class StartUp extends AppCompatActivity {
         return false;
     }
 
-
     public void LogIn(View view) {
         String email = usernameEditTxt.getText().toString();
         String password = passwordEditTxt.getText().toString();
@@ -133,7 +132,6 @@ public class StartUp extends AppCompatActivity {
             }
         });
     }
-
 
     public void CreateProfile(View view){
         //Opens CreateProfile Activity

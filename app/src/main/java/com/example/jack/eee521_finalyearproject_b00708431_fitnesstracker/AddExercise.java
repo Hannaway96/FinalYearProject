@@ -17,17 +17,17 @@ import java.util.ArrayList;
 public class AddExercise extends AppCompatActivity{
 
     private String TAG = "MyApp";
-    public String exerciseType = "";
+    private String exerciseType = "";
     private Spinner typeSpinner, exerciseSpinner;
     private EditText repsEditText, setsEditText;
-    ArrayList<Exercise> tempList = new ArrayList<>();
+    private ArrayList<Exercise> tempList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_exercise);
 
-        //Retrieve Parceable List from WorkoutLog and equal it to a tempList so the exercise
+        //Retrieve Parceable List from Workout Log and equal it to a tempList so the exercise
         //is added to the current Exercise List then passed back to be displayed, where another exercise
         // will be added on top of it again.
 
@@ -78,8 +78,9 @@ public class AddExercise extends AppCompatActivity{
         finish();
     }
 
+    private void GetExercises(String type){
 
-    public void GetExercises(String type){
+        //Sets the content of the exercise spinner based on the type
 
         ArrayAdapter<CharSequence> exerciseAdapter = null;
 
@@ -104,10 +105,12 @@ public class AddExercise extends AppCompatActivity{
                 exerciseAdapter = ArrayAdapter.createFromResource(this, R.array.LegExercises, android.R.layout.simple_spinner_item);
                 break;
 
-            default: exerciseAdapter = ArrayAdapter.createFromResource(this, R.array.LegExercises, android.R.layout.simple_spinner_item);
+            default:
+                exerciseAdapter = ArrayAdapter.createFromResource(this, R.array.AbExercises, android.R.layout.simple_spinner_item);
             break;
         }
 
+        //Set the array adapter to the spinner
         exerciseAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         exerciseSpinner.setAdapter(exerciseAdapter);
     }
@@ -133,10 +136,12 @@ public class AddExercise extends AppCompatActivity{
             noSets = Integer.parseInt(setsEditText.getText().toString());
         }
 
+        //Create exercise object and add it to the temp list
         if(exerciseName != null && exerciseType != null && noReps>0 && noSets>0){
             Exercise exercise = new Exercise(exerciseType, exerciseName, noReps, noSets);
             tempList.add(exercise);
 
+            //Pass the new exercise list to the workout log again
             Toast.makeText(this, "Exercise Added to workout", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(AddExercise.this, WorkoutLog.class);
             intent.putExtra("newList", tempList);

@@ -3,25 +3,17 @@ package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 public class Menu extends AppCompatActivity {
 
-    CardView workoutLogCardView, workoutGenCardView, userStatsCardView, exitCardView;
-    ImageView workoutLogImg, workoutGenImg, userStatsImg, exitImg;
-    FirebaseAuth firebaseAuth;
+    private ImageView workoutLogImg, workoutGenImg, userStatsImg, exitImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
-        firebaseAuth.getInstance();
 
         //Checks if the user has requested that the program should exit
         if(getIntent().getBooleanExtra("EXIT", false)){
@@ -29,10 +21,6 @@ public class Menu extends AppCompatActivity {
         }
 
         //Declaring resources used within the XML
-        workoutLogCardView = (CardView)findViewById(R.id.Menu_WorkoutLog_card_view);
-        workoutGenCardView = (CardView)findViewById(R.id.Menu_WorkoutPlans_card_view);
-        userStatsCardView = (CardView)findViewById(R.id.Menu_UserStats_cardView);
-        exitCardView = (CardView)findViewById(R.id.Menu_Exit_CardView);
         workoutLogImg = (ImageView)findViewById(R.id.Menu_WorkoutLog_imgview);
         workoutGenImg = (ImageView)findViewById(R.id.Menu_WorkoutPlans_imgview);
         userStatsImg = (ImageView)findViewById(R.id.Menu_UserStats_imgview);

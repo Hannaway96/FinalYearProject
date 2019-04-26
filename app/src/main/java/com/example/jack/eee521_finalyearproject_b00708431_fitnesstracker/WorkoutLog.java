@@ -34,11 +34,11 @@ public class WorkoutLog extends AppCompatActivity {
 
     private FirebaseFirestore db;
     private FirebaseAuth firebaseAuth;
-    Button addExerciseBtn;
-    Button saveWorkoutBtn;
-    Button backButton;
-    ListView workoutListView;
-    ArrayList<Exercise> exerciseList = new ArrayList<>();
+    private Button addExerciseBtn;
+    private Button saveWorkoutBtn;
+    private Button backButton;
+    private ListView workoutListView;
+    private ArrayList<Exercise> exerciseList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,11 +113,11 @@ public class WorkoutLog extends AppCompatActivity {
         }
         else {
             //function saves data and sends it to firebase
-            PushToFirebase();
+            PushToDB();
         }
     }
 
-    public void PushToFirebase(){
+    private void PushToDB(){
 
         //Creating workout
         final Workout workout = new Workout();
@@ -207,7 +207,7 @@ public class WorkoutLog extends AppCompatActivity {
         GeneralReturn();
     }
 
-    public void  GeneralReturn(){
+    private void  GeneralReturn(){
         if(exerciseList.size() > 0) {
             AlertDialog.Builder adb = new AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert);
             adb.setTitle("Workout not saved");
@@ -216,7 +216,7 @@ public class WorkoutLog extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     //function saves data and sends it to firebase
-                    PushToFirebase();
+                    PushToDB();
                 }
             });
 

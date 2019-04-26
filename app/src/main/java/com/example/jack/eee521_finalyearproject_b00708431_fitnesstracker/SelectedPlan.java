@@ -10,31 +10,27 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Collections;
-import java.util.Date;
+import java.util.List;
 import java.util.Random;
 import java.util.ArrayList;
 
-
 public class SelectedPlan extends AppCompatActivity {
 
-    FirebaseAuth firebaseAuth;
-    FirebaseFirestore db;
-    TextView titleTxtView;
-    ListView workoutPlanList;
-    String[] exerciseNames;
-    ArrayList<Exercise> exerciseList = new ArrayList<>();
-    String planType = "";
+    private FirebaseAuth firebaseAuth;
+    private FirebaseFirestore db;
+    private TextView titleTxtView;
+    private ListView workoutPlanList;
+    private String[] exerciseNames;
+    private ArrayList<Exercise> exerciseList = new ArrayList<>();
+    private String planType = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,38 +86,28 @@ public class SelectedPlan extends AppCompatActivity {
         });
     }
 
-    public void GetExercises(){
+    private void GetExercises(){
+        //Converting the array of exercise names to a list so it can be shuffled
+        List<String> exerciseNameList = Arrays.asList(exerciseNames);
+        Collections.shuffle(exerciseNameList);
 
-        for(int i = 0; i < exerciseNames.length; i++){
+        for(int i = 0; i < 10; i++){
 
             Exercise exercise = new Exercise();
 
             //Ranges for random rep and set values
             Random r = new Random();
-            int repMin = 8;
-            int repMax = 13;
-            int setMin = 2;
-            int setMax = 6;
-            int randReps = r.nextInt(repMax - repMin) + repMin;
-            int randSets = r.nextInt(setMax - setMin) + setMin;
+            int[] reps = new int[]{8, 10, 12};
+            int randReps = r.nextInt(3 - 0) + 0;
+            int randSets = r.nextInt(4 - 1) + 1;
 
-            exercise.setExerciseName(exerciseNames[i]);
+            exercise.setExerciseName(exerciseNameList.get(i));
             exercise.setExerciseType(planType);
-            exercise.setNoOfReps(randReps);
+            exercise.setNoOfReps(reps[randReps]);
             exercise.setNoOfSets(randSets);
 
             exerciseList.add(exercise);
         }
-
-        //Shuffles the exercise list
-        Collections.shuffle(exerciseList);
-
-        //Have only 10 exercises in the workout
-        int index = 0;
-        do{
-            exerciseList.remove(index);
-            index++;
-        }while(exerciseList.size() > 10);
 
         ExerciseListAdapter adapter = new ExerciseListAdapter(this, R.layout.adapter_view_layout, exerciseList);
         workoutPlanList.setAdapter(adapter);

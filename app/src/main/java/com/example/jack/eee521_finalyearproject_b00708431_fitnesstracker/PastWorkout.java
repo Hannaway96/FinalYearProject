@@ -58,7 +58,7 @@ public class PastWorkout extends AppCompatActivity {
         });
     }
 
-    public void populateActivity(final String workoutID){
+    private void populateActivity(final String workoutID){
 
         //Retrieve document relating to workoutChosen by user
         DocumentReference docRef = db.collection("Workouts").document(workoutID);

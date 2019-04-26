@@ -1,6 +1,5 @@
 package com.example.jack.eee521_finalyearproject_b00708431_fitnesstracker;
 
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -10,7 +9,6 @@ public class Exercise implements Parcelable {
     private String exerciseName;
     private int noOfReps;
     private int noOfSets;
-
 
     public Exercise(){
 
@@ -89,6 +87,4 @@ public class Exercise implements Parcelable {
     public void setNoOfSets(int noOfSets) {
         this.noOfSets = noOfSets;
     }
-
-
 }

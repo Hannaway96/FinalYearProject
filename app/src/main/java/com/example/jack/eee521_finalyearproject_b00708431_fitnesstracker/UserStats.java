@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -27,10 +26,11 @@ public class UserStats extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore db;
     private User user;
-    private TextView nameTxtView, dobTxtView, heightTxtView, weightTxtView, genderTxtView,
-                exercisesCompTxtView, workoutsCompTxtView, userBMITxtView, userHealthStatusTxtView;
+    private TextView    nameTxtView, dobTxtView, heightTxtView,
+                        weightTxtView, genderTxtView, exercisesCompTxtView,
+                        workoutsCompTxtView, userBMITxtView, userHealthStatusTxtView;
 
-    ImageView imgView;
+    private ImageView imgView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +121,7 @@ public class UserStats extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //function saves data and sends it to firebase
-                DeleteUserFromFirebase();
+                DeleteUserFromDB();
             }
         });
 
@@ -135,7 +135,7 @@ public class UserStats extends AppCompatActivity {
         adb.show();
     }
 
-    private void DeleteUserFromFirebase(){
+    private void DeleteUserFromDB(){
 
         //Create firebase user object
         final FirebaseUser fbUser = FirebaseAuth.getInstance().getCurrentUser();

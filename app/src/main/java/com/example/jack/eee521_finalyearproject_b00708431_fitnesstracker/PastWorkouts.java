@@ -5,14 +5,10 @@ import android.content.pm.ActivityInfo;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.view.View;
-import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,17 +16,15 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class PastWorkouts extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore db;
-    ListView pastWorkoutsListView;
-    Button returnBtn;
-    ArrayList<Workout> workoutsList = new ArrayList<>();
+    private ListView pastWorkoutsListView;
+    private Button returnBtn;
+    private ArrayList<Workout> workoutsList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +58,7 @@ public class PastWorkouts extends AppCompatActivity {
         });
     }
 
-    public void GetPastWorkouts() {
+    private void GetPastWorkouts() {
 
         //Get current users ID
         String userID = firebaseAuth.getCurrentUser().getUid();
@@ -85,9 +79,6 @@ public class PastWorkouts extends AppCompatActivity {
                         workout.setTotalReps(Integer.parseInt(document.get("totalReps").toString()));
                         workoutsList.add(workout);
                     }
-
-                    //TODO SORT PAST WORKOUTS BY DATE
-                    //Collections.sort(workoutsList);
 
                     PastWorkoutsListAdapter workoutsListAdapter = new PastWorkoutsListAdapter(PastWorkouts.this, R.layout.adapter_past_workouts_list_view, workoutsList);
                     pastWorkoutsListView.setAdapter(workoutsListAdapter);

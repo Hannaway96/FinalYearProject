@@ -132,12 +132,10 @@ public class Workout implements Parcelable {
     }
 
     public void setTotalExercises(int totalExercises) {
-
         this.totalExercises = totalExercises;
     }
 
     public void setTotalExercises() {
-
         int count = 0;
         for(int i =0; i < exercises.size(); i++){
             count++;
