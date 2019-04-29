@@ -4,9 +4,9 @@
     <string name="start_up_welcome">Welcome!</string>
     <string name="start_up_welcome_Desc">Thank you for using this app, you will use it to keep track of your exercise routine and help motivate you to push your potential!</string>
     <string name="start_up_instruction">Choose a profile from the drop down list</string>
-    <string name="start_up_create_profile">if you don\'t have a profile you can click here</string>
+    <string name="start_up_create_profile">If you don\'t have a profile you can click here.</string>
 
-    <string name="create_profile_warningTxt">NOTE: This app will require your personal measurements to determine calories burned</string>
+    <string name="create_profile_warningTxt">NOTE: This app will require your personal measurements to determine BMI</string>
     <string name="create_profile_email">E-mail</string>
     <string name="create_profile_password">Password</string>
     <string name="create_profile_name">Name</string>
@@ -79,12 +79,12 @@
     <string name="PastWorkouts_Title">Past Workouts</string>
     <string name="PastWorkout_Return_Btn">Return</string>
 
-    <string name="PastWorkout_Title">Workout: </string>
+    <string name="PastWorkout_Title">Workout</string>
     <string name="PastWorkout_totalRepsLbl">Total Reps:</string>
     <string name="PastWorkout_totalRepsValue">0</string>
     <string name="PastWorkout_totalSetsLbl">Total Sets: </string>
     <string name="PastWorkout_totalSetsVal">0</string>
-    <string name="PastWorkout_dateCompletedLbl">Date Completed</string>
+    <string name="PastWorkout_dateCompletedLbl">Date Completed:</string>
     <string name="PastWorkout_dateCompletedVal">1/1/2010</string>
     <string name="PastWorkout_ReturnButton">Return</string>
 

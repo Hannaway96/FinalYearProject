@@ -79,7 +79,6 @@ public class AddExercise extends AppCompatActivity{
     }
 
     private void GetExercises(String type){
-
         //Sets the content of the exercise spinner based on the type
 
         ArrayAdapter<CharSequence> exerciseAdapter = null;
@@ -151,6 +150,7 @@ public class AddExercise extends AppCompatActivity{
 
     public void Return(View view){
         Intent intent = new Intent( AddExercise.this, WorkoutLog.class);
+        intent.putExtra("newList", tempList);
         startActivity(intent);
         finish();
     }
@@ -158,6 +158,7 @@ public class AddExercise extends AppCompatActivity{
     @Override
     public void onBackPressed(){
         Intent intent = new Intent( AddExercise.this, WorkoutLog.class);
+        intent.putExtra("newList", tempList);
         startActivity(intent);
         finish();
     }
